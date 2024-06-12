@@ -12,6 +12,7 @@ import HomePage from './Pages/Home';
 import Signup from './Pages/Signup.jsx';
 import EnterOtpPage from './Pages/EnterOtpPage.jsx';
 import Logon from './Pages/Login.jsx';
+import Dashboard from './Pages/Dashboard.jsx';
 
 
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path : '/enterotp',
     element : <EnterOtpPage/>
+  },
+  {
+    path : '/dashboard',
+    element : <Dashboard/>
   },
 ])
 
