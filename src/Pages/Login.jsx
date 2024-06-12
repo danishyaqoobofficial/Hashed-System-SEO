@@ -30,7 +30,7 @@ function Login() {
                         <div className='w-full mt-[60px] '>
                             <h2 className='text-[#000000] font-[600] text-[28px] '>Login your account</h2>
                             <p className='text-[15px] text-[#000000] font-[300] '>Please enter your account details</p>
-                            <div className='mt-[12px] '>
+                            <form className='mt-[12px] '>
                                 <div className='mt-[12px] '>
                                     <InputField placeholder = 'Enter your Email' type = 'email' lable = 'Email' for = 'Email' id = 'Email'/>
                                 </div>
@@ -42,7 +42,7 @@ function Login() {
                                 </div>
                                 <div className='flex items-center gap-[22px] mt-[11px] '>
                                     <div className='flex items-center gap-[5px] '>
-                                        <input type="checkbox" name="" id="checkbox" />
+                                        <input required type="checkbox" name="" id="checkbox" />
                                         <label className='text-[13px] text-[#000000] select-none ' htmlFor="checkbox">Remember me</label>
                                     </div>
                                     <p className='text-[#0D99FF] text-[13px] select-none cursor-pointer '>Forgot Passwod?</p>
@@ -50,7 +50,7 @@ function Login() {
                                 <Link to={'/enterotp'} className='w-full flex items-center justify-center py-[11px] bg-[#0D99FF] text-white rounded-[6px] mt-[22px] text-[14px] font-[600] cursor-pointer '>
                                     Login
                                 </Link>
-                            </div>
+                            </form>
                             <div className='mt-[35px] '>
                                 <div className='flex items-center gap-[11px] '>
                                     <div className='flex-1 w-full border-[0.9px] border-[#E3E3E3] '></div>
