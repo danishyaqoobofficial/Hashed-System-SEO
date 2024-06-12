@@ -7,12 +7,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Processing from './Pages/Processing';
+import Processing from './Pages/Processing.jsx';
 import HomePage from './Pages/Home';
 import Signup from './Pages/Signup.jsx';
 import EnterOtpPage from './Pages/EnterOtpPage.jsx';
-import Logon from './Pages/Login.jsx';
 import Dashboard from './Pages/Dashboard.jsx';
+import Login from './Pages/Login.jsx';
 
 
 
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path : '/login',
-    element : <Logon/>
+    element : <Login/>
   },
   {
     path : '/signup',
@@ -45,6 +45,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} basename="/"/>
   </React.StrictMode>,
 )
