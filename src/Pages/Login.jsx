@@ -4,10 +4,14 @@ import banner2 from '../assets/Images/banner2.png'
 import signupCenter from '../assets/Images/signupbannercenter.png'
 import InputField from '../Components/InputField'
 import Logo from '../Components/Logo'
+import PasswordField from '../Components/PasswordField'
+
 
 
 
 function Login() {
+
+    
   
 
     return (
@@ -38,7 +42,7 @@ function Login() {
                                     <InputField placeholder = 'Enter your company name' type = 'text' lable = 'Company Name' for = 'Company Name' id = 'Company Name'/>
                                 </div>
                                 <div className='mt-[12px] '>
-                                    <InputField hidePassword placeholder = 'Enter your company password' type = 'password' lable = 'Password' for = 'Password' id = 'Password'/>
+                                    <PasswordField/>
                                 </div>
                                 <div className='flex items-center gap-[22px] mt-[11px] '>
                                     <div className='flex items-center gap-[5px] '>

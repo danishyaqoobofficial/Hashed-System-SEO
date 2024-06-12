@@ -1,4 +1,5 @@
-import React , {useState} from "react"
+// import React , {useState} from "react"
+
 
 
 
@@ -6,7 +7,6 @@ import React , {useState} from "react"
 
 function InputField(props) {
 
-    const [hide, setHide] = useState(false);
   
 
     return (
@@ -29,3 +29,5 @@ function InputField(props) {
   }
   
   export default InputField
+
+  

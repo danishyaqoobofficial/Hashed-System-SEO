@@ -7,7 +7,7 @@ function Logo() {
 
     return (
       <>
-        <Link to={'/'} className="flex items-center gap-[12px] cursor-pointer ">
+        <Link to={'/'} className="flex items-center gap-[12px] cursor-pointer max-w-max ">
             <img className='h-[44px] md:h-[52px]' src = {LogoImage} alt="" />
             <div>
                 <h2 className="text-[#1E4470] text-[18px] md:text-[21px] font-[600] Familjen Grotesk select-none whitespace-nowrap " >Hashed System</h2>
