@@ -89,7 +89,7 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] w-[330px] '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
@@ -106,7 +106,7 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] w-[330px] '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
@@ -285,10 +285,13 @@ function Dashboard() {
                             </div>
                             <div className='w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] mt-[22px] '>
                                 <h2 className='text-[16px] text-[#000000] font-[500]'>Crawled Pages</h2>
-                                <div className='h-[40px] '>
-
+                                <div className='h-[36px] flex items-center mt-[12px] '>
+                                    <span className='h-full w-[5%] bg-[#00C58F] '></span>
+                                    <span className='h-full w-[5%] bg-[#F94E50] '></span>
+                                    <span className='h-full w-[85%] bg-[#FFB26D] '></span>
+                                    <span className='h-full w-[5%] bg-[#0D99FF] '></span>
                                 </div>
-                                <div className='flex items-center justify-between '>
+                                <div className='flex items-center justify-between mt-[12px] '>
                                     <div className='flex items-center gap-[6px] '>
                                         <span className='rounded-[100px] h-[10px] w-[10px] bg-[#0D99FF] '></span>
                                         <p className='text-[13px] text-[#000000] font-[300] '>Health</p>
