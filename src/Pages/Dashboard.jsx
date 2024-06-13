@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom'
 import logoImage from '../assets/Images/Logo.png'
 import DashboardImage from '../assets/Images/DashboardImage.png'
 import IssuesTable from '../Components/IssuesTable'
+import Chart from '../Components/Chart'
+// import Doughnut from 'react-chartjs-2'
+import DoughuntChart from '../Components/DoughuntChart'
+// import Doughnut from '../Components/Doughnut'
 
 
 
@@ -67,8 +71,8 @@ function Dashboard() {
                     </header>
                     <section className='flex gap-[26px] px-[15px] md:px-[20px] py-[32px] '>
                         <div className='flex-1 '>
-                            <div className='flex items-center gap-[26px]  '>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
+                            <div className='flex gap-[26px]  '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] w-[330px] '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
@@ -80,16 +84,12 @@ function Dashboard() {
                                         </span>
                                     </div>
                                     <div className='flex items-center gap-[14px] '>
-                                        <div>
-                                            <p className='text-[11px] text-[#818587] font-[300] '>114</p>
-                                            <p className='text-[11px] text-[#818587] font-[300] '>0</p>
-                                        </div>
-                                        <div className='flex-1 '>
-
+                                        <div className='flex-1 w-full '>
+                                            <Chart/>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
@@ -101,16 +101,12 @@ function Dashboard() {
                                         </span>
                                     </div>
                                     <div className='flex items-center gap-[14px] '>
-                                        <div>
-                                            <p className='text-[11px] text-[#818587] font-[300] '>114</p>
-                                            <p className='text-[11px] text-[#818587] font-[300] '>0</p>
-                                        </div>
-                                        <div className='flex-1 '>
-
+                                        <div className='flex-1 w-full '>
+                                            <Chart/>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
@@ -122,12 +118,8 @@ function Dashboard() {
                                         </span>
                                     </div>
                                     <div className='flex items-center gap-[14px] '>
-                                        <div>
-                                            <p className='text-[11px] text-[#818587] font-[300] '>114</p>
-                                            <p className='text-[11px] text-[#818587] font-[300] '>0</p>
-                                        </div>
-                                        <div className='flex-1 '>
-
+                                        <div className='flex-1 w-full '>
+                                            <Chart/>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +130,49 @@ function Dashboard() {
 
                             {/*  */}
                             <div className=' flex items-center gap-[26px] mt-[16px] flex-wrap '>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
+                                    <div className='flex items-center justify-between '>
+                                        <div>
+                                            <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                            <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
+                                        </div>
+                                        <div className='h-[70px] w-[70px] '>
+                                            <DoughuntChart/>
+                                        </div>
+                                    </div>
+                                    <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
+                                        View Details  
+                                    </div>
+                                </div>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
+                                    <div className='flex items-center justify-between '>
+                                        <div>
+                                            <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                            <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
+                                        </div>
+                                        <div className='h-[70px] w-[70px] '>
+                                            <DoughuntChart/>
+                                        </div>
+                                    </div>
+                                    <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
+                                        View Details  
+                                    </div>
+                                </div>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
+                                    <div className='flex items-center justify-between '>
+                                        <div>
+                                            <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                            <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
+                                        </div>
+                                        <div className='h-[70px] w-[70px] '>
+                                            <DoughuntChart/>
+                                        </div>
+                                    </div>
+                                    <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
+                                        View Details  
+                                    </div>
+                                </div>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
                                     <div className='flex items-center justify-between '>
                                         <div>
                                             <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
@@ -152,7 +186,7 @@ function Dashboard() {
                                         View Details  
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
                                     <div className='flex items-center justify-between '>
                                         <div>
                                             <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
@@ -166,49 +200,7 @@ function Dashboard() {
                                         View Details  
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
-                                    <div className='flex items-center justify-between '>
-                                        <div>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
-                                            <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                        </div>
-                                        <div>
-
-                                        </div>
-                                    </div>
-                                    <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                        View Details  
-                                    </div>
-                                </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
-                                    <div className='flex items-center justify-between '>
-                                        <div>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
-                                            <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                        </div>
-                                        <div>
-
-                                        </div>
-                                    </div>
-                                    <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                        View Details  
-                                    </div>
-                                </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
-                                    <div className='flex items-center justify-between '>
-                                        <div>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
-                                            <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                        </div>
-                                        <div>
-
-                                        </div>
-                                    </div>
-                                    <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                        View Details  
-                                    </div>
-                                </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[320px] '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] w-[330px] '>
                                     <div className='flex items-center justify-between '>
                                         <div>
                                             <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>

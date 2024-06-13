@@ -13,6 +13,7 @@ import Signup from './Pages/Signup.jsx';
 import EnterOtpPage from './Pages/EnterOtpPage.jsx';
 import Dashboard from './Pages/Dashboard.jsx';
 import Login from './Pages/Login.jsx';
+import Charts from './Pages/charts.jsx';
 
 
 
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path : '/dashboard',
     element : <Dashboard/>
+  },
+  {
+    path : '/charts',
+    element : <Charts/>
   },
 ])
 
