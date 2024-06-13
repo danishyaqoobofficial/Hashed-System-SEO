@@ -8,19 +8,22 @@ export const data = {
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 1,],
+      data: [12, 2, 1,],
       backgroundColor: [
         '#0D99FF',
         '#E9ECF0',
+        '#E9ECF0',
       ],
       borderColor: [
-        '#0D99FF',
-        '#E9ECF0',
+        '#fff',
+        '#fff',
       ],
       borderWidth: 1,
       cutout:'60%',
-
+      circumference: 180,
+      rotation : 270
     },
+
   ],
 };
 
@@ -30,7 +33,7 @@ function DoughuntChart() {
 
   return (
     <>
-    <div className="w-full h-full">
+    <div className="w-full h-full flex items-center justify-center ">
          <Doughnut data={data} />
     </div>
     </>

@@ -8,6 +8,11 @@ import DoughuntChart from '../Components/DoughuntChart'
 // import Doughnut from '../Components/Doughnut'
 
 
+// import React from 'react';
+import GaugeChart from '../Components/GaugeChart';
+// import '../App';
+
+
 
 function Dashboard() {
   
@@ -220,25 +225,25 @@ function Dashboard() {
                             <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Top Issues</h2>
 
                             {/*  */}
-                                <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white '>
-                                    <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] '>
-                                        <div className='flex-[3] text-[#000000] text-[13px] font-[300] '>
-                                            Type of issues
-                                        </div>
-                                        <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
-                                            Number of issues
-                                        </div>
-                                        <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
-                                            About the issue
-                                        </div>
+                            <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white '>
+                                <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] '>
+                                    <div className='flex-[3] text-[#000000] text-[13px] font-[300] '>
+                                        Type of issues
                                     </div>
-                                    <IssuesTable typeOfIssue = 'Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue = '1' aboutTheIssue = 'Why and how to fix it' />
-                                    <IssuesTable typeOfIssue = 'slow page ( HTML) load speed' numberOfIssue = '7' aboutTheIssue = 'Why and how to fix it' />
-                                    <IssuesTable typeOfIssue = 'Missing h1' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' orange />
-                                    <IssuesTable typeOfIssue = 'Incorrect pages found in sitemap' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                                    <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                                    <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
+                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
+                                        Number of issues
+                                    </div>
+                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
+                                        About the issue
+                                    </div>
                                 </div>
+                                <IssuesTable typeOfIssue = 'Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue = '1' aboutTheIssue = 'Why and how to fix it' />
+                                <IssuesTable typeOfIssue = 'slow page ( HTML) load speed' numberOfIssue = '7' aboutTheIssue = 'Why and how to fix it' />
+                                <IssuesTable typeOfIssue = 'Missing h1' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' orange />
+                                <IssuesTable typeOfIssue = 'Incorrect pages found in sitemap' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
+                                <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
+                                <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
+                            </div>
                         </div>
                         <div className=' '>
                             <div className='w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
@@ -255,8 +260,8 @@ function Dashboard() {
                                         </defs>
                                     </svg>
                                 </div>
-                                <div className='h-[90px] '>
-
+                                <div className='h-[200px] w-full flex items-center justify-center '>
+                                    <GaugeChart />
                                 </div>
                                 <div className='flex items-center justify-between '>
                                     <div className='flex items-center gap-[6px] '>
