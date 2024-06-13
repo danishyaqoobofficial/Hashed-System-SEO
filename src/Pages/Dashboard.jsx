@@ -69,9 +69,9 @@ function Dashboard() {
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Progress</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>JS Impact</div>
                     </header>
-                    <section className='flex gap-[26px] px-[15px] md:px-[20px] py-[32px] '>
+                    <section className='flex gap-[26px] px-[15px] md:px-[20px] py-[32px] flex-wrap '>
                         <div className='flex-1 '>
-                            <div className='flex gap-[26px]  '>
+                            <div className='flex gap-[26px] flex-wrap '>
                                 <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] w-[330px] '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
@@ -220,26 +220,25 @@ function Dashboard() {
                             <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Top Issues</h2>
 
                             {/*  */}
-                            <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-hidden border border-[#E5E6EE] pb-[20px] bg-white '>
-                                <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] '>
-                                    <div className='flex-[3] text-[#000000] text-[13px] font-[300] '>
-                                        Type of issues
+                                <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white '>
+                                    <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] '>
+                                        <div className='flex-[3] text-[#000000] text-[13px] font-[300] '>
+                                            Type of issues
+                                        </div>
+                                        <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
+                                            Number of issues
+                                        </div>
+                                        <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
+                                            About the issue
+                                        </div>
                                     </div>
-                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
-                                        Number of issues
-                                    </div>
-                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
-                                        About the issue
-                                    </div>
+                                    <IssuesTable typeOfIssue = 'Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue = '1' aboutTheIssue = 'Why and how to fix it' />
+                                    <IssuesTable typeOfIssue = 'slow page ( HTML) load speed' numberOfIssue = '7' aboutTheIssue = 'Why and how to fix it' />
+                                    <IssuesTable typeOfIssue = 'Missing h1' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' orange />
+                                    <IssuesTable typeOfIssue = 'Incorrect pages found in sitemap' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
+                                    <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
+                                    <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
                                 </div>
-                                <IssuesTable typeOfIssue = 'Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue = '1' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = 'slow page ( HTML) load speed' numberOfIssue = '7' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = 'Missing h1' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' orange />
-                                <IssuesTable typeOfIssue = 'Incorrect pages found in sitemap' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                            </div>
-
                         </div>
                         <div className=' '>
                             <div className='w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
