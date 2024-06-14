@@ -48,7 +48,7 @@ function Chart() {
     return (
       <>
       <div className="w-full h-full">
-           <Line options={options} data={data} />
+           <Line className='!h-full !w-full ' options={options} data={data} />
       </div>
       </>
     )

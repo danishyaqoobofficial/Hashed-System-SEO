@@ -52,6 +52,13 @@ function Dashboard() {
                 <Link to={'/'}>
                     <img src={logoImage} alt="" />
                 </Link>
+                <span className='flex items-center justify-center max-w-max p-[8px] rounded-[12px] bg-[#0D99FF] mt-[22px] cursor-pointer mx-auto '>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6876 2.78444H18.9066C19.6833 2.78444 20.3128 3.41401 20.3128 4.19068V21.6563C20.3128 22.4329 19.6833 23.0625 18.9066 23.0625H5.09375C4.31712 23.0625 3.6875 22.4329 3.6875 21.6563V4.19068C3.6875 3.41401 4.31712 2.78444 5.09375 2.78444H8.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.6875 4.6313H8.31226V0.937563H15.6875V4.6313Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.3125 12.7079L10.7608 15.1562L15.6875 10.2297" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
             </aside>
             <main className='flex-1 '>
                 <nav className='flex items-center justify-between  bg-[#fff] sticky top-0 px-[22px] py-[11px] border-b border-[#E5E6EE] w-full '>
@@ -128,7 +135,7 @@ function Dashboard() {
                     </header>
                     <section className='flex gap-[32px] px-[15px] md:px-[20px] py-[32px] xl:flex-row flex-col '>
                         <div className='flex-1 '>
-                            <div className='flex gap-[26px] flex-wrap '>
+                            <div className='flex gap-[26px] md:flex-row flex-col '>
                                 <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
@@ -187,8 +194,8 @@ function Dashboard() {
 
                             {/*  */}
                             <div className=' mt-[16px] '>
-                                <div className='flex items-center gap-[26px] flex-wrap '>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
+                                <div className='flex items-center gap-[26px] md:flex-row flex-col '>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full '>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
@@ -202,7 +209,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1'>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>HTTPS</p>
@@ -216,7 +223,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1'>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Site Performace</p>
@@ -231,8 +238,8 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex items-center gap-[26px] mt-[22px] flex-wrap '>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
+                                <div className='flex items-center gap-[26px] mt-[22px] md:flex-row flex-col  '>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full '>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>International SEO</p>
@@ -246,7 +253,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Core Web Vitals</p>
@@ -260,7 +267,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Markup</p>
@@ -282,15 +289,18 @@ function Dashboard() {
 
                             {/*  */}
                             <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white '>
-                                <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] '>
+                                <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] gap-[8px] '>
                                     <div className='flex-[3] text-[#000000] text-[13px] font-[300] '>
                                         Type of issues
                                     </div>
-                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
+                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] text-center '>
                                         Number of issues
                                     </div>
                                     <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
                                         About the issue
+                                    </div>
+                                    <div className='flex-1 flex items-center justify-end '>
+
                                     </div>
                                 </div>
                                 <IssuesTable typeOfIssue = 'Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue = '1' aboutTheIssue = 'Why and how to fix it' />
