@@ -29,11 +29,11 @@ export const options = {
 
 
 export const data = {
-  labels:["", "","", ""],
+  labels:['' , '' , '' , ''],
   datasets: [
     {
       fill: true,
-      data: [114 , 0 , 114 , 114],
+      data: [100 , 30 , 100 , 100],
       borderColor: 1 ? '#FF4954' : '#F27A23',
       backgroundColor: 2 ? '#FFEEEE'  : "#FFEEEE" ,
     },

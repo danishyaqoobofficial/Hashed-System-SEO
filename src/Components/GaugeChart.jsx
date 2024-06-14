@@ -34,7 +34,7 @@ function DoughuntChart() {
   return (
     <>
     <div className="w-full h-full flex items-center justify-center ">
-         <Doughnut data={data} />
+         <Doughnut className='!h-[200px] !p-[0px] !m-[0px] ' data={data} />
     </div>
     </>
   )
