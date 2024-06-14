@@ -126,9 +126,9 @@ function Dashboard() {
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Progress</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>JS Impact</div>
                     </header>
-                    <section className='flex gap-[32px] px-[15px] md:px-[20px] py-[32px] '>
+                    <section className='flex gap-[32px] px-[15px] md:px-[20px] py-[32px] xl:flex-row flex-col '>
                         <div className='flex-1 '>
-                            <div className='flex gap-[26px] '>
+                            <div className='flex gap-[26px] flex-wrap '>
                                 <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
@@ -187,7 +187,7 @@ function Dashboard() {
 
                             {/*  */}
                             <div className=' mt-[16px] '>
-                                <div className='flex items-center gap-[26px] '>
+                                <div className='flex items-center gap-[26px] flex-wrap '>
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
                                         <div className='flex items-center justify-between '>
                                             <div>
@@ -231,7 +231,7 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex items-center gap-[26px] mt-[22px] '>
+                                <div className='flex items-center gap-[26px] mt-[22px] flex-wrap '>
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
                                         <div className='flex items-center justify-between '>
                                             <div>
