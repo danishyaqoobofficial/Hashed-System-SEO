@@ -7,6 +7,8 @@ import Chart from '../Components/Chart'
 import DoughuntChart from '../Components/DoughuntChart'
 // import Doughnut from '../Components/Doughnut'
 
+import React, { useState } from 'react';
+
 
 // import React from 'react';
 import GaugeChart from '../Components/GaugeChart';
@@ -15,6 +17,32 @@ import GaugeChart from '../Components/GaugeChart';
 
 
 function Dashboard() {
+
+    const [popup, setPopup] = useState('hidden');
+    const [messageCounter, setMessageCounter] = useState('block');
+    const [profilePopup, setProfilePopup] = useState('hidden');
+    const [rotate, setRotate] = useState('rotate-180');
+
+    const notificationPopup = ()=>  {
+        if (popup === 'hidden') {
+            setPopup('block');
+            setMessageCounter('hidden');
+        }else{
+            setPopup('hidden');
+        }
+    }
+
+    const ProfilePopup = () =>{
+        if (profilePopup === 'hidden') {
+            setProfilePopup('block');
+            setRotate('rotate-270');
+        }else{
+            setProfilePopup('hidden');
+            setRotate('rotate-180');
+        }
+    }
+
+
   
 
     return (
@@ -37,7 +65,7 @@ function Dashboard() {
                     </span>
                     <div className='flex items-center gap-[22px] '>
                         <div className=' relative '>
-                            <div className=' relative cursor-pointer '>
+                            <div className=' relative cursor-pointer ' onClick={notificationPopup} >
                                 <svg width="26" height="26" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_47_8013)">
                                     <path d="M25.7193 23.5533L23.9993 21.8333V15.1667C23.9993 11.0733 21.8127 7.64666 17.9993 6.73999V5.83333C17.9993 4.72666 17.106 3.83333 15.9993 3.83333C14.8927 3.83333 13.9993 4.72666 13.9993 5.83333V6.73999C10.1727 7.64666 7.99934 11.06 7.99934 15.1667V21.8333L6.27934 23.5533C5.43934 24.3933 6.026 25.8333 7.21267 25.8333H24.7727C25.9727 25.8333 26.5593 24.3933 25.7193 23.5533ZM21.3327 23.1667H10.666V15.1667C10.666 11.86 12.6793 9.16666 15.9993 9.16666C19.3193 9.16666 21.3327 11.86 21.3327 15.1667V23.1667ZM15.9993 29.8333C17.466 29.8333 18.666 28.6333 18.666 27.1667H13.3327C13.3327 28.6333 14.5193 29.8333 15.9993 29.8333Z" fill="#A3AED0"/>
@@ -48,13 +76,17 @@ function Dashboard() {
                                     </clipPath>
                                     </defs>
                                 </svg>
-                                <span className='bg-white p-[2px] absolute -top-[5px] -right-[5px] '>
+                                <span className={`bg-white p-[2px] absolute -top-[5px] -right-[5px] ${messageCounter} `}>
                                     <span className='bg-[#f93a3a] select-none rounded-[100px] h-[16px] w-[16px] flex items-center justify-center text-[10px] font-[600]  text-[#fff] '>
                                         3
                                     </span>
                                 </span>
                             </div>
-                            <div className=' absolute w-[300px] max-h-[320px] overflow-auto bg-[#fff] rounded-[11px] top-[28px] right-[10px] shadow-md '>
+                            <div className={` absolute w-[300px] max-h-[320px] overflow-auto bg-[#fff] rounded-[11px] top-[28px] right-[10px] Shadow ${popup} `}>
+                                <div className='border-b border-[#E4E4E4] px-[22px] py-[11px] flex items-start gap-[9px] '>
+                                    <i class="fa-regular fa-message text-[18px] text-[#0000006c] pt-[1px] "></i>
+                                    <p className='text-[13px] text-[#0000006c] font-[500]'>You a new message notification. Open it and start your working.</p>
+                                </div>
                                 <div className='border-b border-[#E4E4E4] px-[22px] py-[11px] flex items-start gap-[9px] '>
                                     <i class="fa-regular fa-message text-[18px] text-[#0000006c] pt-[1px] "></i>
                                     <p className='text-[13px] text-[#0000006c] font-[500]'>You a new message notification. Open it and start your working.</p>
@@ -65,14 +97,22 @@ function Dashboard() {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex items-center gap-[10px] cursor-default '>
-                            <div className='flex items-center gap-[7px] '>
-                                <div className=' bg-cover bg-no-repeat bg-center h-[34px] w-[34px] rounded-[100px] ' style={{backgroundImage : `url(${DashboardImage})` }} ></div>
-                                <p className='text-[#1E2549] text-[14px] font-[500] '>John Smith</p>
+                        <div className=' relative '>
+                            <div className='flex items-center gap-[10px] cursor-default border border-transparent hover:border-[#b5bfd9] transition-all rounded-[30px] p-[5px] ' onClick={ProfilePopup} >
+                                <div className='flex items-center gap-[7px] '>
+                                    <div className=' bg-cover bg-no-repeat bg-center h-[34px] w-[34px] rounded-[100px] ' style={{backgroundImage : `url(${DashboardImage})` }} ></div>
+                                    <p className='text-[#1E2549] text-[14px] font-[500] select-none '>John Smith</p>
+                                </div>
+                                <span>
+                                    <i class={`fa-solid fa-angle-up text-[14px] text-[#9e9ca8] transition-all ${rotate} `}></i>
+                                </span>
                             </div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.3902 14.8371L16.8402 10.2922C16.9433 10.1871 17 10.0468 17 9.89715C17 9.74753 16.9433 9.60721 16.8402 9.50209L16.5126 9.16739C16.2991 8.9496 15.9521 8.9496 15.739 9.16739L12.0021 12.9838L8.26105 9.16316C8.15804 9.05804 8.02072 9 7.8743 9C7.72772 9 7.5904 9.05804 7.48731 9.16316L7.15975 9.49785C7.05675 9.60305 7 9.74329 7 9.89292C7 10.0425 7.05675 10.1829 7.15975 10.288L11.6139 14.8371C11.7172 14.9425 11.8552 15.0003 12.0018 15C12.1491 15.0003 12.2869 14.9425 12.3902 14.8371Z" fill="#9C9AA7"/>
-                            </svg>
+                            <div className={` absolute max-w-[200px] max-h-[220px] overflow-auto bg-[#fff] rounded-[11px] top-[52px] right-0 Shadow p-[6px] transition-all ${profilePopup} `}>
+                                <div className='flex items-center justify-center gap-[13px] rounded-[9px] bg-transparent text-[#F10A0A] hover:bg-red-100 cursor-pointer px-[14px] py-[12px]  '>
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.3555L14 17.3555C14.7956 17.3555 15.5587 17.0394 16.1213 16.4768C16.6839 15.9142 17 15.1511 17 14.3555L17 4.35547C17 3.55982 16.6839 2.79676 16.1213 2.23415C15.5587 1.67154 14.7956 1.35547 14 1.35547L13 1.35547M5 5.35547L1 9.35547M1 9.35547L5 13.3555M1 9.35547L13 9.35547" stroke="#F10A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    Log Out
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -86,9 +126,9 @@ function Dashboard() {
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Progress</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>JS Impact</div>
                     </header>
-                    <section className='flex gap-[32px] px-[15px] md:px-[20px] py-[32px] flex-wrap '>
+                    <section className='flex gap-[32px] px-[15px] md:px-[20px] py-[32px] '>
                         <div className='flex-1 '>
-                            <div className='flex gap-[26px] flex-wrap '>
+                            <div className='flex gap-[26px] '>
                                 <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
@@ -107,9 +147,9 @@ function Dashboard() {
                                     </div>
                                 </div>
                                 <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
-                                    <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
+                                    <p className='text-[13px] text-[#000000] font-[300] '>Warnings</p>
                                     <div className='flex items-center gap-[5px] '>
-                                        <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
+                                        <h3 className='text-[22px] text-[#FF4954] font-[500] '>2,765</h3>
                                         <span className='flex items-center gap-[4px] rounded-[30px] bg-[#FFEEEE] px-[8px] py-[2px] text-[#FF4954] text-[12px] font-[500] '>
                                             -2
                                             <svg width="8" height="8" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,9 +164,9 @@ function Dashboard() {
                                     </div>
                                 </div>
                                 <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
-                                    <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
+                                    <p className='text-[13px] text-[#000000] font-[300] '>Critical</p>
                                     <div className='flex items-center gap-[5px] '>
-                                        <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
+                                        <h3 className='text-[22px] text-[#FF4954] font-[500] '>2,765</h3>
                                         <span className='flex items-center gap-[4px] rounded-[30px] bg-[#FFEEEE] px-[8px] py-[2px] text-[#FF4954] text-[12px] font-[500] '>
                                             -2
                                             <svg width="8" height="8" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +205,7 @@ function Dashboard() {
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1'>
                                         <div className='flex items-center justify-between '>
                                             <div>
-                                                <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                                <p className='text-[13px] text-[#000000] font-[300] '>HTTPS</p>
                                                 <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
                                             </div>
                                             <div className='h-[70px] w-[70px] '>
@@ -179,7 +219,7 @@ function Dashboard() {
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1'>
                                         <div className='flex items-center justify-between '>
                                             <div>
-                                                <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                                <p className='text-[13px] text-[#000000] font-[300] '>Site Performace</p>
                                                 <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
                                             </div>
                                             <div className='h-[70px] w-[70px] '>
@@ -195,7 +235,7 @@ function Dashboard() {
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
                                         <div className='flex items-center justify-between '>
                                             <div>
-                                                <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                                <p className='text-[13px] text-[#000000] font-[300] '>International SEO</p>
                                                 <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
                                             </div>
                                             <div>
@@ -209,7 +249,7 @@ function Dashboard() {
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
                                         <div className='flex items-center justify-between '>
                                             <div>
-                                                <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                                <p className='text-[13px] text-[#000000] font-[300] '>Core Web Vitals</p>
                                                 <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
                                             </div>
                                             <div>
@@ -223,7 +263,7 @@ function Dashboard() {
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 '>
                                         <div className='flex items-center justify-between '>
                                             <div>
-                                                <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
+                                                <p className='text-[13px] text-[#000000] font-[300] '>Markup</p>
                                                 <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
                                             </div>
                                             <div>
