@@ -36,22 +36,34 @@ function Dashboard() {
                         </svg>
                     </span>
                     <div className='flex items-center gap-[22px] '>
-                        <div className=' relative cursor-pointer '>
-                            <svg width="26" height="26" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_47_8013)">
-                                <path d="M25.7193 23.5533L23.9993 21.8333V15.1667C23.9993 11.0733 21.8127 7.64666 17.9993 6.73999V5.83333C17.9993 4.72666 17.106 3.83333 15.9993 3.83333C14.8927 3.83333 13.9993 4.72666 13.9993 5.83333V6.73999C10.1727 7.64666 7.99934 11.06 7.99934 15.1667V21.8333L6.27934 23.5533C5.43934 24.3933 6.026 25.8333 7.21267 25.8333H24.7727C25.9727 25.8333 26.5593 24.3933 25.7193 23.5533ZM21.3327 23.1667H10.666V15.1667C10.666 11.86 12.6793 9.16666 15.9993 9.16666C19.3193 9.16666 21.3327 11.86 21.3327 15.1667V23.1667ZM15.9993 29.8333C17.466 29.8333 18.666 28.6333 18.666 27.1667H13.3327C13.3327 28.6333 14.5193 29.8333 15.9993 29.8333Z" fill="#A3AED0"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_47_8013">
-                                <rect width="32" height="32" fill="white" transform="translate(0 0.5)"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            <span className='bg-white p-[2px] absolute -top-[5px] -right-[5px] '>
-                                <span className='bg-[#f93a3a] select-none rounded-[100px] h-[16px] w-[16px] flex items-center justify-center text-[10px] font-[600]  text-[#fff] '>
-                                    3
+                        <div className=' relative '>
+                            <div className=' relative cursor-pointer '>
+                                <svg width="26" height="26" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_47_8013)">
+                                    <path d="M25.7193 23.5533L23.9993 21.8333V15.1667C23.9993 11.0733 21.8127 7.64666 17.9993 6.73999V5.83333C17.9993 4.72666 17.106 3.83333 15.9993 3.83333C14.8927 3.83333 13.9993 4.72666 13.9993 5.83333V6.73999C10.1727 7.64666 7.99934 11.06 7.99934 15.1667V21.8333L6.27934 23.5533C5.43934 24.3933 6.026 25.8333 7.21267 25.8333H24.7727C25.9727 25.8333 26.5593 24.3933 25.7193 23.5533ZM21.3327 23.1667H10.666V15.1667C10.666 11.86 12.6793 9.16666 15.9993 9.16666C19.3193 9.16666 21.3327 11.86 21.3327 15.1667V23.1667ZM15.9993 29.8333C17.466 29.8333 18.666 28.6333 18.666 27.1667H13.3327C13.3327 28.6333 14.5193 29.8333 15.9993 29.8333Z" fill="#A3AED0"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_47_8013">
+                                    <rect width="32" height="32" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span className='bg-white p-[2px] absolute -top-[5px] -right-[5px] '>
+                                    <span className='bg-[#f93a3a] select-none rounded-[100px] h-[16px] w-[16px] flex items-center justify-center text-[10px] font-[600]  text-[#fff] '>
+                                        3
+                                    </span>
                                 </span>
-                            </span>
+                            </div>
+                            <div className=' absolute w-[300px] max-h-[320px] overflow-auto bg-[#fff] rounded-[11px] top-[28px] right-[10px] shadow-md '>
+                                <div className='border-b border-[#E4E4E4] px-[22px] py-[11px] flex items-start gap-[9px] '>
+                                    <i class="fa-regular fa-message text-[18px] text-[#0000006c] pt-[1px] "></i>
+                                    <p className='text-[13px] text-[#0000006c] font-[500]'>You a new message notification. Open it and start your working.</p>
+                                </div>
+                                <div className='border-b border-[#E4E4E4] px-[22px] py-[11px] flex items-start gap-[9px] '>
+                                    <i class="fa-regular fa-message text-[18px] text-[#0000006c] pt-[1px] "></i>
+                                    <p className='text-[13px] text-[#0000006c] font-[500]'>You a new message notification. Open it and start your working.</p>
+                                </div>
+                            </div>
                         </div>
                         <div className='flex items-center gap-[10px] cursor-default '>
                             <div className='flex items-center gap-[7px] '>
