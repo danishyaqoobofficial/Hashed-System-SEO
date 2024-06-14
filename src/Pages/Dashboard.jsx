@@ -42,12 +42,11 @@ function Dashboard() {
         }
     }
 
-
   
 
     return (
       <>
-        <main className=" flex bg-[#f7f7f9] ">
+        <main className=" flex bg-[#f7f7f9] z-0 ">
             <aside className="h-[100vh] bg-[white] border-r sticky inset-0 border-[#E5E6EE] w-[70px] px-[11px] py-[9px] ">
                 <Link to={'/'}>
                     <img src={logoImage} alt="" />
@@ -60,8 +59,8 @@ function Dashboard() {
                     </svg>
                 </span>
             </aside>
-            <main className='flex-1 '>
-                <nav className='flex items-center justify-between  bg-[#fff] sticky top-0 px-[22px] py-[11px] border-b border-[#E5E6EE] w-full '>
+            <main className='flex-1 ' >
+                <nav className='flex items-center justify-between  bg-[#fff] sticky top-0 px-[22px] py-[11px] border-b border-[#E5E6EE] w-full ' >
                     <span className='flex items-center justify-center cursor-pointer '>
                         <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="34" fill="white"/>
@@ -123,7 +122,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </nav>
-                <section className=' max-w-[1440px] mx-auto overflow-auto '>
+                <section className=' max-w-[1440px] mx-auto overflow-auto  ' >
                     <header className=' px-[15px] md:px-[20px] py-[11px] flex items-center flex-wrap gap-[5px] '>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-[#0D99FF] rounded-[6px] text-white text-[14px] font-[400] transition-all cursor-default '>Overview</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Isues</div>

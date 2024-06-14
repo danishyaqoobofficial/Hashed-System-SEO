@@ -15,7 +15,7 @@ function Processing() {
             <section className="h-[100vh] max-w-[1440px] w-full mx-auto px-[15px] md:px-[20px] ">
                 <Navbar/>
                 <div className=" max-w-[460px] mx-auto mt-[100px] sm:mt-[140px] ">
-                    <p className="text-center text-[18px] md:text-[20px] font-[400] text-[#000000] ">We are processing omn your website...</p>
+                    <p className="text-center text-[18px] md:text-[20px] font-[400] text-[#000000] ">We are processing on your website...</p>
                     <div className="mt-[22px] ">
                         <div className="flex items-center justify-center !z-50 ">
                             <img className="h-[130px] w-[130px] !z-50 " src={LogoImage} alt="" />
