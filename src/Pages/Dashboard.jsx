@@ -289,9 +289,10 @@ function Dashboard() {
                                             Number of issues
                                         </div>
                                         <div className='flex-1 text-[#000000] text-[13px] font-[300]'>
-                                            About the issue
+                                            
                                         </div>
-                                        <div className='flex-1 flex items-center justify-end'>
+                                        <div className='flex-1 flex items-center justify-center'>
+                                            About the issue
                                         </div>
                                     </div>
                                     <IssuesTable typeOfIssue='Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue='1' aboutTheIssue='Why and how to fix it' />

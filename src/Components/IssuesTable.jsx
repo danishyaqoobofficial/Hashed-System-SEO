@@ -20,7 +20,7 @@ function IssuesTable(props) {
                 <div className='flex-1 text-[#0D99FF] text-[13px] font-[300] line-clamp-1 '>
                     {props.aboutTheIssue}
                 </div>
-                <div className="flex-1 flex items-center justify-end cursor-pointer ">
+                <div className="flex-1 flex items-center justify-center cursor-pointer ">
                     <span className="flex items-center justify-center px-[14px] py-[8px] bg-[#0D99FF] text-white text-[12px] font-[500] max-w-max rounded-[8px] ">
                         Assign
                     </span>
