@@ -279,31 +279,33 @@ function Dashboard() {
                             <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Top Issues</h2>
 
                             {/*  */}
-                            <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white '>
-                                <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] gap-[8px] '>
-                                    <div className='flex-[3] text-[#000000] text-[13px] font-[300] '>
-                                        Type of issues
+                            <div className='overflow-x-auto'>
+                                <div className='mt-[16px] max-w-[600px] md:max-w-none w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white'>
+                                    <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] gap-[8px]'>
+                                        <div className='flex-[3] text-[#000000] text-[13px] font-[300]'>
+                                            Type of issues
+                                        </div>
+                                        <div className='flex-1 text-[#000000] text-[13px] font-[300] text-center'>
+                                            Number of issues
+                                        </div>
+                                        <div className='flex-1 text-[#000000] text-[13px] font-[300]'>
+                                            About the issue
+                                        </div>
+                                        <div className='flex-1 flex items-center justify-end'>
+                                        </div>
                                     </div>
-                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] text-center '>
-                                        Number of issues
-                                    </div>
-                                    <div className='flex-1 text-[#000000] text-[13px] font-[300] '>
-                                        About the issue
-                                    </div>
-                                    <div className='flex-1 flex items-center justify-end '>
-
-                                    </div>
+                                    <IssuesTable typeOfIssue='Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue='1' aboutTheIssue='Why and how to fix it' />
+                                    <IssuesTable typeOfIssue='slow page ( HTML) load speed' numberOfIssue='7' aboutTheIssue='Why and how to fix it' />
+                                    <IssuesTable typeOfIssue='Missing h1' numberOfIssue='91' aboutTheIssue='Why and how to fix it' orange />
+                                    <IssuesTable typeOfIssue='Incorrect pages found in sitemap' numberOfIssue='91' aboutTheIssue='Why and how to fix it' />
+                                    <IssuesTable typeOfIssue='4xx errors' numberOfIssue='91' aboutTheIssue='Why and how to fix it' />
+                                    <IssuesTable typeOfIssue='4xx errors' numberOfIssue='91' aboutTheIssue='Why and how to fix it' />
                                 </div>
-                                <IssuesTable typeOfIssue = 'Neither canonical URL or 301 redirect from HTTP homepage' numberOfIssue = '1' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = 'slow page ( HTML) load speed' numberOfIssue = '7' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = 'Missing h1' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' orange />
-                                <IssuesTable typeOfIssue = 'Incorrect pages found in sitemap' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                                <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
                             </div>
+
                         </div>
                         <div className=' '>
-                            <div className='w-[226px] sm:[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
+                            <div className='w-[226px] sm:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
                                 <div className='flex items-center gap-[6px] '>
                                     <h2 className='text-[16px] text-[#000000] font-[500]'>Site Health</h2>
                                     <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -426,7 +428,7 @@ function Dashboard() {
         </div>
 
         {/*  */}
-        <div className={` fixed bg-transparent !h-[100vh] inset-0 flex justify-end items-start pt-[52px] pr-[12px] sm:pr-[210px] ${popup} `} onClick={CloseNotificationPopup} >
+        <div className={` fixed bg-transparent !h-[100vh] inset-0 flex justify-end items-start pt-[55px] pr-[12px] sm:pr-[210px] ${popup} `} onClick={CloseNotificationPopup} >
             <div className={` w-[300px] max-h-[320px] overflow-auto bg-[#fff] rounded-[11px] top-[28px] right-[10px] Shadow  `}>
                 <div className='border-b border-[#E4E4E4] px-[22px] py-[11px] flex items-start gap-[9px] '>
                     <i class="fa-regular fa-message text-[18px] text-[#0000006c] pt-[1px] "></i>
