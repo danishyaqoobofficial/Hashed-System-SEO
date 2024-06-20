@@ -15,12 +15,12 @@ function Processing() {
             <section className="h-[100vh] max-w-[1440px] w-full mx-auto px-[15px] md:px-[20px] ">
                 <Navbar/>
                 <div className=" max-w-[460px] mx-auto mt-[100px] sm:mt-[140px] ">
-                    <p className="text-center text-[18px] md:text-[20px] font-[400] text-[#000000] ">We are processing on your website...</p>
+                    <p className="text-center text-[18px] md:text-[20px] font-[400] text-[#000000] relative !z-50 ">We are processing on your website...</p>
                     <div className="mt-[22px] ">
-                        <div className="flex items-center justify-center !z-50 ">
-                            <img className="h-[130px] w-[130px] !z-50 " src={LogoImage} alt="" />
+                        <div className="flex items-center justify-center relative !z-50 ">
+                            <img className="h-[130px] w-[130px] relative !z-50 " src={LogoImage} alt="" />
                         </div>
-                        <h2 className="text-[#0D99FF] !z-50 font-[300] text-[18px] md:text-[26px] text-center mt-[22px] ">“Web Analytics is a revolution that enables you to base your decisions on data and not on opinions”</h2>
+                        <h2 className="text-[#0D99FF] relative !z-50 font-[300] text-[18px] md:text-[26px] text-center mt-[22px] ">“Web Analytics is a revolution that enables you to base your decisions on data and not on opinions”</h2>
                         <div className="mt-[18px] flex items-center justify-center ">
                             <Link to={'/dashboard'} className="!z-50 cursor-pointer px-[16px] py-[6px] rounded-[30px] bg-[#E0F2FF] flex items-center justify-center text-[#0D99FF] text-[13px] md:text-[14px] font-[300] ">
                                 @ Avinash Kaushik

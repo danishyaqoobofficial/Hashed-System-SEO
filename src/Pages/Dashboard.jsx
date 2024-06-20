@@ -279,7 +279,7 @@ function Dashboard() {
                             <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Top Issues</h2>
 
                             {/*  */}
-                            {/* <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white '>
+                            <div className='mt-[16px] flex-1 w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white '>
                                 <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] gap-[8px] '>
                                     <div className='flex-[3] text-[#000000] text-[13px] font-[300] '>
                                         Type of issues
@@ -300,7 +300,7 @@ function Dashboard() {
                                 <IssuesTable typeOfIssue = 'Incorrect pages found in sitemap' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
                                 <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
                                 <IssuesTable typeOfIssue = '4xx errors' numberOfIssue = '91' aboutTheIssue = 'Why and how to fix it' />
-                            </div> */}
+                            </div>
                         </div>
                         <div className=' '>
                             <div className='w-[226px] sm:[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
