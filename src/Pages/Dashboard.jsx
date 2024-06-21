@@ -304,7 +304,7 @@ function Dashboard() {
                             <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Top Issues</h2>
 
                             {/*  */}
-                            <div className='overflow-x-auto w-[900px] '>
+                            {/* <div className='overflow-x-auto w-[900px] '>
                                 <div className='mt-[16px] w-[900px] md:flex-1 md:w-full rounded-[9px] border border-[#E5E6EE] pb-[20px] bg-white'>
                                     <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] gap-[8px]'>
                                         <div className='flex-[3] text-[#000000] text-[13px] font-[300]'>
@@ -327,7 +327,7 @@ function Dashboard() {
                                     <IssuesTable typeOfIssue='4xx errors' numberOfIssue='91' aboutTheIssue='Why and how to fix it' />
                                     <IssuesTable typeOfIssue='4xx errors' numberOfIssue='91' aboutTheIssue='Why and how to fix it' />
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className=' gap-[22px] flex-wrap media_Q '>
                             <div className='flex-1 xl:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>

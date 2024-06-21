@@ -14,3 +14,13 @@
         display: flex !important;
     }
 }
+@media (max-width : 513px) {
+    .remove_border{
+        border-right: 0px !important;
+    }
+}
+@media (max-width : 359px) {
+    .remove_border_second{
+        border-right: 0px !important;
+    }
+}
