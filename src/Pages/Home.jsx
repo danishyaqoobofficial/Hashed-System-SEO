@@ -32,7 +32,7 @@ function HomePage() {
                         </div>
                         <div className="px-[40px] border-r border-[#D6D8DF] mt-[16px] remove_border">
                             <h2 className="text-[#000000] text-center text-[20px] font-[400] ">1480</h2>
-                            <p className="text-[#8E929E] text-[12px] text-center font-[300] ">Users Joinedfvrg</p>
+                            <p className="text-[#8E929E] text-[12px] text-center font-[300] ">Users Joined</p>
                         </div>
                         <div className="px-[40px] mt-[16px] ">
                             <h2 className="text-[#000000] text-center text-[20px] font-[400] ">1480</h2>
