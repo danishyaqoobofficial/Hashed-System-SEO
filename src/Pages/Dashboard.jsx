@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logoImage from '../assets/Images/Logo.png'
+import LogoImage from '../assets/Images/Logo.png'
 import DashboardImage from '../assets/Images/DashboardImage.png'
 import IssuesTable from '../Components/IssuesTable'
 import Chart from '../Components/Chart'
@@ -23,6 +23,7 @@ function Dashboard() {
     const [profilePopup, setProfilePopup] = useState('hidden');
     const [rotate, setRotate] = useState('rotate-180');
     const [border, setBorder] = useState('border-transparent');
+    const [hide, setShow] = useState('hidden');
 
     const notificationPopup = ()=>  {
         if (popup === 'hidden') {
@@ -54,26 +55,50 @@ function Dashboard() {
         setPopup('hidden');
     }
 
+    // 
+
+    const hamburgerIcon = () => {
+        setShow('block');
+    }
+
+    const closeHamburger = () => {
+        setShow('hidden');
+    }
+
   
 
     return (
       <>
         <main className=" flex bg-[#f7f7f9] z-0 ">
-            <aside className="h-[100vh] bg-[white] border-r sticky inset-0 border-[#E5E6EE] w-[70px] px-[11px] py-[9px] ">
-                <Link to={'/'}>
-                    <img src={logoImage} alt="" />
-                </Link>
-                <span className='flex items-center justify-center max-w-max p-[8px] rounded-[12px] bg-[#0D99FF] mt-[22px] cursor-pointer mx-auto '>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.6876 2.78444H18.9066C19.6833 2.78444 20.3128 3.41401 20.3128 4.19068V21.6563C20.3128 22.4329 19.6833 23.0625 18.9066 23.0625H5.09375C4.31712 23.0625 3.6875 22.4329 3.6875 21.6563V4.19068C3.6875 3.41401 4.31712 2.78444 5.09375 2.78444H8.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15.6875 4.6313H8.31226V0.937563H15.6875V4.6313Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8.3125 12.7079L10.7608 15.1562L15.6875 10.2297" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </span>
+            <aside className=" bg-white border-r fixed left-0 bottom-0 h-full border-[#E5E6EE] px-[11px] py-[9px] z-50 custom_transition ">
+                <div className='flex items-center gap-[26px] custom_transition '>
+                    <Link to={'/'} className='flex items-center gap-[12px] cursor-pointer max-w-max ' >
+                        <span className='h-[50px] w-[50px] flex items-center justify-center '>
+                            <img className=' h-full w-full ' src = {LogoImage} alt="" />
+                        </span>
+                        <div className={`${hide}`}>
+                            <h2 className="text-[#1E4470] text-[18px] md:text-[21px] font-[600] Familjen Grotesk select-none whitespace-nowrap " >Hashed System</h2>
+                            <p className='text-[#0D99FF] text-[9px] md:text-[10px] font-[500] select-none leading-3 whitespace-nowrap '>Empowering Digital Transformation</p>
+                        </div>
+                    </Link>
+                    <span className={`flex items-center justify-center ${hide} custom_transition cursor-pointer `} onClick={closeHamburger} >
+                        <i class="text-[26px] fa-solid fa-xmark text-[#2B3674] "></i>
+                    </span>
+                </div>
+                <div className='flex items-center gap-[12px] mt-[24px] custom_transition cursor-pointer max-w-max '>
+                    <span className='flex items-center justify-center h-[50px] w-[50px] p-[9px] rounded-[12px] bg-[#0D99FF]'>
+                        <svg className='h-full w-full ' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6876 2.78444H18.9066C19.6833 2.78444 20.3128 3.41401 20.3128 4.19068V21.6563C20.3128 22.4329 19.6833 23.0625 18.9066 23.0625H5.09375C4.31712 23.0625 3.6875 22.4329 3.6875 21.6563V4.19068C3.6875 3.41401 4.31712 2.78444 5.09375 2.78444H8.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.6875 4.6313H8.31226V0.937563H15.6875V4.6313Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.3125 12.7079L10.7608 15.1562L15.6875 10.2297" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <p className={`${hide} text-[#1E4470] text-[17px] font-[500] transition-all `}>Tasks</p>
+                </div>
             </aside>
             <main className='flex-1 ' >
                 <nav className='flex items-center justify-between  bg-[#fff] sticky top-0 px-[16px] sm:px-[22px] py-[11px] border-b border-[#E5E6EE] w-full ' >
-                    <span className='flex items-center justify-center cursor-pointer '>
+                    <span className='flex items-center justify-center cursor-pointer ml-[60px]' onClick={hamburgerIcon} >
                         <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="34" fill="white"/>
                             <line x1="10" y1="9.5" x2="25" y2="9.5" stroke="#2B3674"/>
@@ -114,7 +139,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </nav>
-                <section className=' max-w-[1440px] mx-auto overflow-auto  ' >
+                <section className=' max-w-[1440px] mx-auto overflow-auto pl-[62px] ' >
                     <header className=' px-[15px] md:px-[20px] py-[11px] flex items-center flex-wrap gap-[5px] '>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-[#0D99FF] rounded-[6px] text-white text-[14px] font-[400] transition-all cursor-default '>Overview</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Isues</div>
@@ -305,8 +330,8 @@ function Dashboard() {
                             </div>
 
                         </div>
-                        <div className=' '>
-                            <div className='w-[226px] sm:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
+                        <div className=' gap-[22px] flex-wrap media_Q '>
+                            <div className='flex-1 xl:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
                                 <div className='flex items-center gap-[6px] '>
                                     <h2 className='text-[16px] text-[#000000] font-[500]'>Site Health</h2>
                                     <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -347,7 +372,7 @@ function Dashboard() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-[226px] sm:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] mt-[22px] '>
+                            <div className='w-full sm:flex-1 xl:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] xl:mt-[22px] '>
                                 <h2 className='text-[16px] text-[#000000] font-[500]'>Crawled Pages</h2>
                                 <div className='h-[36px] flex items-center mt-[12px] '>
                                     <span className='h-full w-[5%] bg-[#00C58F] '></span>
@@ -391,7 +416,7 @@ function Dashboard() {
                                     <p className='text-[13px] text-[#000000] font-[300] '>0</p>
                                 </div>
                             </div>
-                            <div className='w-[226px] sm:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] mt-[22px] '>
+                            <div className='w-full lg:flex-1 xl:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] xl:mt-[22px] '>
                                 <div className='border-b border-[#E4E4E4] pb-[14px] '>
                                     <div className='flex items-center gap-[6px] '>
                                         <h2 className='text-[16px] text-[#000000] font-[500]'>Robots.txt Updates</h2>
