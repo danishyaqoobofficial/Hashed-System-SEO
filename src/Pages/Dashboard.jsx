@@ -70,22 +70,22 @@ function Dashboard() {
     return (
       <>
         <main className=" flex bg-[#f7f7f9] z-0 ">
-            <aside className=" bg-white border-r fixed left-0 bottom-0 h-full border-[#E5E6EE] px-[11px] py-[9px] z-50 custom_transition ">
+            <aside className=" bg-white border-r fixed left-0 bottom-0 h-full border-[#E5E6EE] px-[11px] py-[9px] z-50 transition-all ">
                 <div className='flex items-center gap-[26px] custom_transition '>
                     <Link to={'/'} className='flex items-center gap-[12px] cursor-pointer max-w-max ' >
                         <span className='h-[50px] w-[50px] flex items-center justify-center '>
                             <img className=' h-full w-full ' src = {LogoImage} alt="" />
                         </span>
-                        <div className={`${hide}`}>
-                            <h2 className="text-[#1E4470] text-[18px] md:text-[21px] font-[600] Familjen Grotesk select-none whitespace-nowrap " >Hashed System</h2>
-                            <p className='text-[#0D99FF] text-[9px] md:text-[10px] font-[500] select-none leading-3 whitespace-nowrap '>Empowering Digital Transformation</p>
+                        <div className={`${hide} transition-all `}>
+                            <h2 className="text-[#1E4470] text-[18px] md:text-[21px] font-[600] Familjen Grotesk select-none whitespace-nowrap transition-all " >Hashed System</h2>
+                            <p className='text-[#0D99FF] text-[9px] md:text-[10px] font-[500] select-none leading-3 whitespace-nowrap transition-all '>Empowering Digital Transformation</p>
                         </div>
                     </Link>
-                    <span className={`flex items-center justify-center ${hide} custom_transition cursor-pointer `} onClick={closeHamburger} >
-                        <i class="text-[26px] fa-solid fa-xmark text-[#2B3674] "></i>
+                    <span className={`flex items-center justify-center ${hide} transition-all cursor-pointer `} onClick={closeHamburger} >
+                        <i class="text-[26px] fa-solid fa-xmark text-[#2B3674] transition-all "></i>
                     </span>
                 </div>
-                <div className='flex items-center gap-[12px] mt-[24px] custom_transition cursor-pointer max-w-max '>
+                <div className='flex items-center gap-[12px] mt-[24px] transition-all cursor-pointer max-w-max '>
                     <span className='flex items-center justify-center h-[50px] w-[50px] p-[9px] rounded-[12px] bg-[#0D99FF]'>
                         <svg className='h-full w-full ' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.6876 2.78444H18.9066C19.6833 2.78444 20.3128 3.41401 20.3128 4.19068V21.6563C20.3128 22.4329 19.6833 23.0625 18.9066 23.0625H5.09375C4.31712 23.0625 3.6875 22.4329 3.6875 21.6563V4.19068C3.6875 3.41401 4.31712 2.78444 5.09375 2.78444H8.3125" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -98,7 +98,7 @@ function Dashboard() {
             </aside>
             <main className='flex-1 ' >
                 <nav className='flex items-center justify-between  bg-[#fff] sticky top-0 px-[16px] sm:px-[22px] py-[11px] border-b border-[#E5E6EE] w-full ' >
-                    <span className='flex items-center justify-center cursor-pointer ml-[60px]' onClick={hamburgerIcon} >
+                    <span className='flex items-center justify-center cursor-pointer ml-[60px] transition-all ' onClick={hamburgerIcon} >
                         <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="34" fill="white"/>
                             <line x1="10" y1="9.5" x2="25" y2="9.5" stroke="#2B3674"/>
@@ -139,17 +139,17 @@ function Dashboard() {
                         </div>
                     </div>
                 </nav>
-                <section className=' max-w-[1440px] mx-auto overflow-auto pl-[62px] ' >
-                    <header className=' px-[15px] md:px-[20px] py-[11px] flex items-center flex-wrap gap-[5px] '>
+                <section className=' max-w-[1440px] mx-auto overflow-auto pl-[70px] ' >
+                    <header className=' px-[12px] md:px-[20px] py-[11px] flex items-center flex-wrap gap-[5px] '>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-[#0D99FF] rounded-[6px] text-white text-[14px] font-[400] transition-all cursor-default '>Overview</div>
-                        <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Isues</div>
+                        <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Issues</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Crawled Pages</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Statics</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Compare Crawls</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>Progress</div>
                         <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default '>JS Impact</div>
                     </header>
-                    <section className='flex gap-[32px] px-[15px] md:px-[20px] py-[32px] xl:flex-row flex-col '>
+                    <section className='flex gap-[32px] px-[12px] md:px-[20px] py-[32px] xl:flex-row flex-col '>
                         <div className='flex-1 '>
                             <div className='flex gap-[26px] md:flex-row flex-col '>
                                 <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
@@ -316,7 +316,7 @@ function Dashboard() {
                                         <div className='flex-1 text-[#000000] text-[13px] font-[300]'>
                                             
                                         </div>
-                                        <div className='flex-1 flex items-center justify-center'>
+                                        <div className='flex-1 flex items-center justify-center text-[#000000] text-[13px] font-[300] '>
                                             About the issue
                                         </div>
                                     </div>
