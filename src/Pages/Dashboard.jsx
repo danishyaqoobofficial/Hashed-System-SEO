@@ -152,7 +152,7 @@ function Dashboard() {
                     <section className='flex gap-[32px] px-[12px] md:px-[20px] py-[32px] xl:flex-row flex-col '>
                         <div className='flex-1 '>
                             <div className='flex gap-[26px] md:flex-row flex-col '>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] pb-[0px] flex-1 '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Errors</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>110</h3>
@@ -169,7 +169,7 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] pb-[0px] flex-1 '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Warnings</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>2,765</h3>
@@ -186,7 +186,7 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] pb-[0px] flex-1 '>
+                                <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] pb-[0px] flex-1 '>
                                     <p className='text-[13px] text-[#000000] font-[300] '>Critical</p>
                                     <div className='flex items-center gap-[5px] '>
                                         <h3 className='text-[22px] text-[#FF4954] font-[500] '>2,765</h3>
@@ -211,7 +211,7 @@ function Dashboard() {
                             {/*  */}
                             <div className=' mt-[16px] '>
                                 <div className='flex items-center gap-[26px] md:flex-row flex-col '>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full '>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full '>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
@@ -225,7 +225,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>HTTPS</p>
@@ -239,7 +239,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Site Performace</p>
@@ -255,7 +255,7 @@ function Dashboard() {
                                     </div>
                                 </div>
                                 <div className='flex items-center gap-[26px] mt-[22px] md:flex-row flex-col  '>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full '>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full '>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>International SEO</p>
@@ -269,7 +269,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Core Web Vitals</p>
@@ -283,7 +283,7 @@ function Dashboard() {
                                             View Details  
                                         </div>
                                     </div>
-                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] flex-1 w-full'>
+                                    <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
                                         <div className='flex items-center justify-between '>
                                             <div>
                                                 <p className='text-[13px] text-[#000000] font-[300] '>Markup</p>
@@ -304,8 +304,8 @@ function Dashboard() {
                             <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Top Issues</h2>
 
                             {/*  */}
-                            <div className='overflow-x-auto'>
-                                <div className='mt-[16px] max-w-[600px] md:max-w-none w-full rounded-[9px] overflow-auto border border-[#E5E6EE] pb-[20px] bg-white'>
+                            <div className='overflow-x-auto w-[900px] '>
+                                <div className='mt-[16px] w-[900px] md:flex-1 md:w-full rounded-[9px] border border-[#E5E6EE] pb-[20px] bg-white'>
                                     <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] gap-[8px]'>
                                         <div className='flex-[3] text-[#000000] text-[13px] font-[300]'>
                                             Type of issues
@@ -328,7 +328,6 @@ function Dashboard() {
                                     <IssuesTable typeOfIssue='4xx errors' numberOfIssue='91' aboutTheIssue='Why and how to fix it' />
                                 </div>
                             </div>
-
                         </div>
                         <div className=' gap-[22px] flex-wrap media_Q '>
                             <div className='flex-1 xl:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] '>
