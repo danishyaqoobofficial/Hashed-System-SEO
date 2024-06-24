@@ -20,18 +20,18 @@ function Login() {
             <section className="md:h-[100vh] max-w-[1220px] w-full mx-auto px-[15px] md:px-[20px] flex gap-[40px] xl:gap-[90px] py-[32px] md:py-[60px] items-start md:flex-row flex-col-reverse">
                 <div className="flex-1 relative h-[500px] w-full md:mt-[0px] mt-[32px] ">
                     <div className='h-full w-full z-0 '>
-                        <img className=' absolute inset-0 !z-10 w-full h-[700px] ' src={banner1} alt="" />
-                        <img className=' absolute inset-0 !z-0 w-full h-[700px]' src={banner2} alt="" />
-                        <div className='!z-50 absolute w-full pt-[330px] px-[18px] sm:px-[22px] md:px-[32px] lg:px-[50px] '>
-                            <img className='' src={signupCenter} alt="" />
-                            <h2 className='mt-[22px] text-white text-[24px] md:text-[28px] lg:text-[34px] font-[300] leading-[39px] '>Achieve Clear Results with Online Marketing</h2>
+                        <img className=' absolute inset-0 !z-10 w-full sm:h-[700px] loginImage1 ' src={banner1} alt="" />
+                        <img className=' absolute inset-0 !z-0 w-full sm:h-[700px] loginImage2' src={banner2} alt="" />
+                        <div className='!z-50 absolute w-full sm:pt-[330px] px-[18px] sm:px-[22px] md:px-[32px] lg:px-[50px] loginPera'>
+                            <img src={signupCenter} alt="" />
+                            <h2 className='mt-[18px] sm:mt-[22px] text-white text-[20px] sm:text-[24px] md:text-[28px] lg:text-[34px] font-[300] leading-[30px] sm:leading-[39px] '>Achieve Clear Results with Online Marketing</h2>
                         </div>
                     </div>
                 </div>
                 <div className="flex-1 w-full ">
                     <div className='pt-[16px] '>
                         <Logo/>
-                        <div className='w-full mt-[60px] '>
+                        <div className='w-full mt-[40px] md:mt-[60px] '>
                             <h2 className='text-[#000000] font-[600] text-[28px] '>Login your account</h2>
                             <p className='text-[15px] text-[#000000] font-[300] '>Please enter your account details</p>
                             <form className='mt-[12px] '>

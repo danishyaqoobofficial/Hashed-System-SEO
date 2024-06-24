@@ -14,13 +14,35 @@
         display: flex !important;
     }
 }
-@media (max-width : 513px) {
+@media (max-width : 491px) {
     .remove_border{
         border-right: 0px !important;
     }
 }
-@media (max-width : 359px) {
+@media (max-width : 337px) {
     .remove_border_second{
         border-right: 0px !important;
+    }
+}
+@media (max-width : 640px) and (min-width : 450px) {
+    .loginImage1{
+        height: 550px !important;
+    }
+    .loginImage2{
+        height: 550px !important;
+    }
+    .loginPera{
+        padding-top: 240px !important;
+    }
+}
+@media (max-width : 450px){
+    .loginImage1{
+        height: 420px !important;
+    }
+    .loginImage2{
+        height: 420px !important;
+    }
+    .loginPera{
+        padding-top: 120px !important;
     }
 }
