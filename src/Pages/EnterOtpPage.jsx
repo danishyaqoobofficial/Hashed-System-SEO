@@ -19,8 +19,10 @@ function EnterOtpPage() {
       }
 
       if (e.key === 'Delete' || e.key === 'Backspace') {
+        console.log(index,'outer');
         if (index > 0) {
-          inputRefs.current[index - 1].focus();
+            console.log(index,'inner');
+          inputRefs.current[index].focus();
         }
       }
     };
