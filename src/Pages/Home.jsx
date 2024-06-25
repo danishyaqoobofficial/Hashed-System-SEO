@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import Navbar from "../Components/Navbar"
 import image from '../assets/Images/Group 1000008924.png'
+import CountUp from 'react-countup'
+// import CountUp from "react-countup/build/CountUp"
 
 
 
@@ -27,15 +29,15 @@ function HomePage() {
                     </div>
                     <div className="flex items-center justify-center pt-[35px] flex-wrap relative !z-30 ">
                         <div className="px-[40px] border-r border-[#D6D8DF] mt-[16px] remove_border_second ">
-                            <h2 className="text-[#000000] text-center text-[20px] font-[400] ">1480</h2>
+                            <h2 className="text-[#000000] text-center text-[20px] font-[400] "><CountUp start={0} end={1480} duration={3} delay={0} /></h2>
                             <p className="text-[#8E929E] text-[12px] text-center font-[300] ">Users Joined</p>
                         </div>
                         <div className="px-[40px] border-r border-[#D6D8DF] mt-[16px] remove_border">
-                            <h2 className="text-[#000000] text-center text-[20px] font-[400] ">1480</h2>
+                            <h2 className="text-[#000000] text-center text-[20px] font-[400] "><CountUp start={0} end={1480} duration={3} delay={0} /></h2>
                             <p className="text-[#8E929E] text-[12px] text-center font-[300] ">Users Joined</p>
                         </div>
                         <div className="px-[40px] mt-[16px] ">
-                            <h2 className="text-[#000000] text-center text-[20px] font-[400] ">1480</h2>
+                            <h2 className="text-[#000000] text-center text-[20px] font-[400] "><CountUp start={0} end={1480} duration={3} delay={0} /></h2>
                             <p className="text-[#8E929E] text-[12px] text-center font-[300] ">Users Joined</p>
                         </div>
                     </div>
