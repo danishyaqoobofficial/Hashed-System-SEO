@@ -51,9 +51,9 @@ function Login() {
                                     </div>
                                     <p className='text-[#0D99FF] text-[13px] select-none cursor-pointer '>Forgot Passwod?</p>
                                 </div>
-                                <Link to={'/enterotp'} className='w-full flex items-center justify-center py-[11px] bg-[#0D99FF] text-white rounded-[6px] mt-[22px] text-[14px] font-[600] cursor-pointer '>
+                                <button className='w-full flex items-center justify-center py-[11px] bg-[#0D99FF] text-white rounded-[6px] mt-[22px] text-[14px] font-[600] cursor-pointer '>
                                     Login
-                                </Link>
+                                </button>
                             </form>
                             <div className='mt-[35px] '>
                                 <div className='flex items-center gap-[11px] '>
