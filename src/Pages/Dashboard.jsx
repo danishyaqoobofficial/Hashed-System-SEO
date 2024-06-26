@@ -139,7 +139,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </nav>
-                <section className='pl-[70px] '>
+                <section className='pl-[70px] w-[100vw]'>
                     <section className='' >
                         <div className="overflow-x-auto max-w-[90vw]">
                             <header className=' px-[12px] md:px-[20px] py-[11px] flex items-center gap-[5px] '>
