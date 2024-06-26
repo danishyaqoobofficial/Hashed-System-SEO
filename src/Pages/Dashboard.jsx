@@ -10,6 +10,7 @@ import DoughuntChart from '../Components/DoughuntChart'
 import GaugeChart from '../Components/GaugeChart';
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
+import AddTask from '../Components/AddTask';
 
 
 
@@ -95,9 +96,20 @@ function Dashboard() {
                     </span>
                     <p className={`${hide} text-[#1E4470] text-[17px] font-[500] transition-all `}>Tasks</p>
                 </div>
+                <div className='flex items-center gap-[12px] mt-[24px] transition-all cursor-pointer max-w-max '>
+                    <span className='flex items-center justify-center h-[50px] w-[50px] p-[9px] rounded-[12px] bg-[#fff]'>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.59102 15.2068C13.28 15.2068 16.433 15.7658 16.433 17.9988C16.433 20.2318 13.301 20.8068 9.59102 20.8068C5.90102 20.8068 2.74902 20.2528 2.74902 18.0188C2.74902 15.7848 5.88002 15.2068 9.59102 15.2068Z" stroke="#1E4470" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.59108 12.0198C7.16908 12.0198 5.20508 10.0568 5.20508 7.6348C5.20508 5.2128 7.16908 3.2498 9.59108 3.2498C12.0121 3.2498 13.9761 5.2128 13.9761 7.6348C13.9851 10.0478 12.0351 12.0108 9.62208 12.0198H9.59108Z" stroke="#1E4470" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.4824 10.8816C18.0834 10.6566 19.3164 9.2826 19.3194 7.6196C19.3194 5.9806 18.1244 4.6206 16.5574 4.3636" stroke="#1E4470" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.5947 14.7322C20.1457 14.9632 21.2287 15.5072 21.2287 16.6272C21.2287 17.3982 20.7187 17.8982 19.8947 18.2112" stroke="#1E4470" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <p className={`${hide} text-[#1E4470] text-[17px] font-[500] transition-all `}>Profile</p>
+                </div>
             </aside>
-            <section className='flex-1 ' >
-                <nav className='flex items-center justify-between  bg-[#fff] sticky top-0 px-[16px] sm:px-[22px] py-[11px] border-b border-[#E5E6EE] w-full ' >
+            <section className='flex-1 min-h-[100vh] '>
+                <nav className='flex items-center justify-between bg-[#fff] fixed top-0 px-[16px] sm:px-[22px] py-[11px] border-b border-[#E5E6EE] w-full ' >
                     <span className='flex items-center justify-center cursor-pointer ml-[60px] transition-all ' onClick={hamburgerIcon} >
                         <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="35" height="34" fill="white"/>
@@ -139,7 +151,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </nav>
-                <section className='pl-[70px] w-[100vw]'>
+                {/* <main className='pl-[70px] pt-[70px] w-[100vw]'>
                     <section className='' >
                         <div className="overflow-x-auto max-w-[90vw]">
                             <header className=' px-[12px] md:px-[20px] py-[11px] flex items-center gap-[5px] '>
@@ -152,7 +164,7 @@ function Dashboard() {
                                 <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default whitespace-nowrap '>JS Impact</div>
                             </header>
                         </div>
-                        <section className='flex gap-[32px] px-[12px] md:px-[20px] py-[32px] xl:flex-row flex-col '>
+                        <div className='flex gap-[32px] px-[12px] md:px-[20px] py-[32px] xl:flex-row flex-col '>
                             <div className='flex-1 '>
                                 <div className='flex gap-[26px] md:flex-row flex-col '>
                                     <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] !pb-[0px] flex-1 '>
@@ -207,11 +219,9 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                {/*  */}
                                 
                                 <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Thematic Reports</h2>
 
-                                {/*  */}
                                 <div className=' mt-[16px] '>
                                     <div className='flex items-center gap-[26px] md:flex-row flex-col '>
                                         <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full '>
@@ -302,11 +312,9 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                {/*  */}
 
                                 <h2 className='text-[22px] text-[#000000] font-[500] mt-[16px] '>Top Issues</h2>
 
-                                {/*  */}
                                 <div className='overflow-x-auto max-w-[90vw] '>
                                     <div className='mt-[16px] w-[900px] md:flex-1 md:w-full rounded-[9px] border border-[#E5E6EE] pb-[20px] bg-white'>
                                         <div className='flex items-center py-[9px] px-[22px] bg-[#E5E6EE] border-b border-[#E5E6EE] gap-[8px]'>
@@ -440,7 +448,6 @@ function Dashboard() {
                                             <ReactTooltip
                                                 id="Robots-txt-Updates"
                                                 place="bottom"
-                                                // variant="info"
                                                 content="Robots.txt Updatesp"
                                             />
                                         </div>
@@ -453,9 +460,60 @@ function Dashboard() {
                                     <p className='text-[12px] text-[#999999] font-[300] mt-[11px] '>No changes detected</p>
                                 </div>
                             </div>
-                        </section>
+                        </div>
                     </section>
-                </section>
+                </main> */}
+                <main className='pl-[80px] pt-[70px] w-[100vw] h-[100%] '>
+                    <section className='h-[100%] px-[15px] md:px-[20px] '>
+                        <div className='flex items-center justify-between py-[32px] gap-[22px] sm:flex-row flex-col '>
+                            <h2 className='text-[000000] text-[24px] font-[500] '>Tasks</h2>
+                            <div className='flex gap-[8px] sm:w-[400px] md:w-[440px] lg:w-[480px] w-full SearchAndButton '>
+                                <div className='border border-[#D8DBE6] flex items-center gap-[3px] pl-[19px] bg-white rounded-[8px] flex-1 SearchAndButton1 '>
+                                    <span className='h-[20px] w-[20px] flex items-center justify-center '>
+                                        <svg className='h-full w-full ' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="11.7664" cy="11.7664" r="8.98856" stroke="#8E929E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18.0181 18.4849L21.5421 21.9997" stroke="#8E929E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    <input className='bg-transparent h-[41px] outline-none px-[6px] text-[#8E929E] text-[13px] w-full ' type="search" placeholder='Search  tasks ...' name="" id="" />
+                                </div>
+                                <div className='rounded-[7px] bg-[#0D99FF] flex items-center justify-center px-[22px] py-[9px] cursor-pointer select-none text-[14px] text-white SearchAndButton2 '>
+                                    <p>+ Add Task</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='mt-[40px] '>
+                            <div className='flex items-center gap-[25px] sm:gap-[32px] flex-wrap '>
+                                <h2 className='text-[000000] text-[17px] sm:text-[18px] font-[500] '>In Progress</h2>
+                                <p className='text-[000000] text-[13px] font-[300] '>4</p>
+                                <p className='text-[13px] text-[#0D99FF] select-none cursor-pointer font-[300] '>+ Add Taks</p>
+                            </div>
+                        </div>
+                        <div className='overflow-x-auto max-w-[90vw] mt-[30px] '>
+                            <div className='mt-[16px] w-[900px] md:flex-1 md:w-full  pb-[20px]'>
+                                <div className='flex items-center py-[9px] px-[22px] gap-[8px]'>
+                                    <div className='flex-1 text-[#A6ABB9] text-[13px] font-[400]'>
+                                        Name
+                                    </div>
+                                    <div className='flex-1 text-[#A6ABB9] text-[13px] font-[400] text-center '>
+                                        Assignee
+                                    </div>
+                                    <div className='flex-1 text-[#A6ABB9] text-[13px] font-[400] text-center '>
+                                        Due Date
+                                    </div>
+                                    <div className='flex-1 text-[#A6ABB9] text-[13px] font-[400] text-center'>
+                                        Priority
+                                    </div>
+                                    <div className='flex-1 text-[#A6ABB9] text-[13px] font-[400]'>
+                                        
+                                    </div>
+                                </div>
+                                <AddTask  Name = 'Meta descriptions are added or not' Assignee = 'MA' Due_Date = 'Tomorrow' Priority = 'High' />
+                                <AddTask  Name = 'Meta descriptions are added or not' Assignee = 'MA' Due_Date = 'Tomorrow' Priority = 'High' />
+                            </div>
+                        </div>
+                    </section>
+                </main>
             </section>
         </main>
         <div className={` fixed bg-transparent !h-[100vh] inset-0 !z-50 ${profilePopup} `} onClick={CloseProfilePopup} >

@@ -45,6 +45,16 @@
     .loginPera{
         padding-top: 120px !important;
     }
+    .SearchAndButton{
+        flex-direction: column !important;
+    }
+    .SearchAndButton1{
+        width: 100% !important;
+    }
+    .SearchAndButton2{
+        width: 100% !important;
+        flex: 1 !important;
+    }
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
