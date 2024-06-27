@@ -11,9 +11,11 @@ import Processing from './Pages/Processing.jsx';
 import HomePage from './Pages/Home';
 import Signup from './Pages/Signup.jsx';
 import EnterOtpPage from './Pages/EnterOtpPage.jsx';
-import Dashboard from './Pages/Dashboard.jsx';
 import Login from './Pages/Login.jsx';
 import Charts from './Pages/charts.jsx';
+import Home from './Pages/Dashboard/Home.jsx';
+import Task from './Pages/Dashboard/Task.jsx';
+import Profile from './Pages/Dashboard/Profile.jsx';
 
 
 
@@ -40,8 +42,16 @@ const router = createBrowserRouter([
   },
   {
     path : '/dashboard',
-    element : <Dashboard/>,
+    element : <Home/>,
     
+  },
+  {
+    path : '/dashboard/task',
+    element : <Task/>,
+  },
+  {
+    path : '/dashboard/profile',
+    element : <Profile/>,
   },
   {
     path : '/charts',

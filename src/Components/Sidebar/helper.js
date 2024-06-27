@@ -1,22 +1,24 @@
+import Task from "../../Components/svgs"
 
 
 const useSidebar = (active)=> {
 
     const routes = [
         {
-            url: "/",
-            heading: "Home",
-            isActive: active == 'home',
-            icon: "/Assets/images/Logo.png",
-        },
-        {
             url: "/tasks",
             heading: "Tasks",
-            // icon: <Svgs.Task />,
-            isActive: active == 'task'
+            icon: 'Task',
+            isActive: active == 'task',
+            link: '/dashboard/task'
+        },
+        {
+            url: "/profile",
+            heading: "Profile",
+            icon: 'Profile',
+            isActive: active == 'profile',
+            link: '/dashboard/profile'
         }
     ]
-
     return{
         routes
     }

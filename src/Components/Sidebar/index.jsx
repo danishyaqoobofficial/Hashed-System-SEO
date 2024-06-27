@@ -3,63 +3,18 @@ import useSidebar from './helper'
 import { Link } from 'react-router-dom'
 
 const Sidebar = ({active}) => {
+
     const {routes} =useSidebar(active)
-    console.log(routes,"routes")
-
-    const [popup, setPopup] = useState('hidden');
-    const [messageCounter, setMessageCounter] = useState('block');
-    const [profilePopup, setProfilePopup] = useState('hidden');
-    const [rotate, setRotate] = useState('rotate-180');
-    const [border, setBorder] = useState('border-transparent');
     const [hide, setShow] = useState('hidden');
-
-    const notificationPopup = ()=>  {
-        if (popup === 'hidden') {
-            setPopup('block');
-        }else{
-            setPopup('hidden');
-        }
-    }
-
-    const ProfilePopup = () =>{
-        if (profilePopup === 'hidden') {
-            setProfilePopup('block');
-            setRotate('rotate-270');
-            setBorder('border-[#b5bfd8]');
-        }else{
-            setProfilePopup('hidden');
-            setRotate('rotate-180');
-        }
-    }
-
-    const CloseProfilePopup = () =>{
-        setProfilePopup('hidden');
-        setRotate('rotate-180');
-        setBorder('border-transparent');
-    }
-
-    const CloseNotificationPopup = () =>{
-        setPopup('hidden');
-    }
-
-    // 
-
-    const hamburgerIcon = () => {
-        setShow('block');
-    }
 
     const closeHamburger = () => {
         setShow('hidden');
     }
-
-    const mark_all_read = () => {
-        setMessageCounter('hidden');
-    }
   return (
     <div>
         <aside className=" bg-white border-r fixed left-0 bottom-0 h-full border-[#E5E6EE] px-[11px] py-[9px] z-50 transition-all ">
-            <div className='flex items-center gap-[26px] custom_transition '>
-                <Link to={'/'} className='flex items-center gap-[12px] cursor-pointer max-w-max ' >
+            <div className='flex items-center gap-[26px] custom_transition mb-[20px] '>
+                <Link to={'/dashboard'} className='flex items-center gap-[12px] cursor-pointer max-w-max ' >
                     <span className='h-[50px] w-[50px] flex items-center justify-center '>
                         <img className=' h-full w-full ' src = "/Assets/images/Logo.png" alt="" />
                     </span>
@@ -73,18 +28,18 @@ const Sidebar = ({active}) => {
                 </span>
             </div>
             {routes?.map((itm, index) => (
-                <div 
-                key={index} 
-                className="flex items-center gap-[12px] mt-[24px] transition-all cursor-pointer">
-                <span className="flex items-center justify-center h-[50px] w-[50px] p-[9px] rounded-[12px] bg-[#0D99FF]">
-                            <img src={itm?.icon} alt={itm?.name} />
-                </span>
-                <p className={`${hide} text-[#1E4470] text-[17px] font-[500] transition-all`}>
-                    {itm.name}
-                </p>
-                </div>
+                <Link to={itm?.link}
+                    key={index} 
+                    className="flex items-center gap-[12px] mt-[12px] transition-all cursor-pointer">
+                    <span className={`flex items-center justify-center h-[50px] w-[50px] p-[9px] rounded-[9px] transition-all hover:bg-[#0D99FF] ${itm.isActive? 'bg-[#0D99FF]' : ''} `}>
+                        {itm?.icon}
+                    </span>
+                    <p className={`${hide} text-[#1E4470] text-[17px] font-[500] transition-all`}>
+                        {itm.name}
+                    </p>
+                </Link>
             ))}
-            <div className='flex items-center gap-[12px] mt-[24px] transition-all cursor-pointer '>
+            {/* <div className='flex items-center gap-[12px] mt-[24px] transition-all cursor-pointer '>
                 <span className='flex items-center justify-center h-[50px] w-[50px] p-[9px] rounded-[12px] bg-[#fff]'>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.59102 15.2068C13.28 15.2068 16.433 15.7658 16.433 17.9988C16.433 20.2318 13.301 20.8068 9.59102 20.8068C5.90102 20.8068 2.74902 20.2528 2.74902 18.0188C2.74902 15.7848 5.88002 15.2068 9.59102 15.2068Z" stroke="#1E4470" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -94,7 +49,7 @@ const Sidebar = ({active}) => {
                     </svg>
                 </span>
                 <p className={`${hide} text-[#1E4470] text-[17px] font-[500] transition-all `}>Profile</p>
-            </div>
+            </div> */}
         </aside>
     </div>
   )

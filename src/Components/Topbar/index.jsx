@@ -41,16 +41,10 @@ const Topbar = () => {
         setPopup('hidden');
     }
 
-    // 
-
     const hamburgerIcon = () => {
         setShow('block');
     }
-
-    const closeHamburger = () => {
-        setShow('hidden');
-    }
-
+    
     const mark_all_read = () => {
         setMessageCounter('hidden');
     }
@@ -100,6 +94,7 @@ const Topbar = () => {
             </div>
         </div>
     </nav>
+    
     {/*  */}
 
     <div className={` fixed bg-transparent !h-[100vh] inset-0 !z-50 ${profilePopup} `} onClick={CloseProfilePopup} >
