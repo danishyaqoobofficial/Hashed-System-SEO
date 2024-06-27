@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom'
-import banner1 from '../assets/Images/banner1.png'
-import banner2 from '../assets/Images/banner2.png'
-import signupCenter from '../assets/Images/signupbannercenter.png'
 import InputField from '../Components/InputField'
 import Logo from '../Components/Logo'
 import PasswordField from '../Components/PasswordField'
@@ -20,10 +17,10 @@ function Login() {
             <section className="md:h-[100vh] max-w-[1220px] w-full mx-auto px-[15px] md:px-[20px] flex gap-[40px] xl:gap-[90px] py-[32px] md:py-[60px] items-start md:flex-row flex-col-reverse">
                 <div className="flex-1 relative h-[500px] w-full md:mt-[0px] mt-[32px] ">
                     <div className='h-full w-full z-0 '>
-                        <img className=' absolute inset-0 !z-10 w-full sm:h-[700px] loginImage1 ' src={banner1} alt="" />
-                        <img className=' absolute inset-0 !z-0 w-full sm:h-[700px] loginImage2' src={banner2} alt="" />
+                        <img className=' absolute inset-0 !z-10 w-full sm:h-[700px] loginImage1 ' src='/Assets/Images/banner1.png' alt="" />
+                        <img className=' absolute inset-0 !z-0 w-full sm:h-[700px] loginImage2' src='/Assets/Images/banner2.png' alt="" />
                         <div className='!z-50 absolute w-full sm:pt-[330px] px-[18px] sm:px-[22px] md:px-[32px] lg:px-[50px] loginPera'>
-                            <img src={signupCenter} alt="" />
+                            <img src='/Assets/Images/signupbannercenter.png' alt="" />
                             <h2 className='mt-[18px] sm:mt-[22px] text-white text-[20px] sm:text-[24px] md:text-[28px] lg:text-[34px] font-[300] leading-[30px] sm:leading-[39px] '>Achieve Clear Results with Online Marketing</h2>
                         </div>
                     </div>

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import Navbar from "../Components/Navbar"
-import image from '../assets/Images/Group 1000008924.png'
 import CountUp from 'react-countup'
 // import CountUp from "react-countup/build/CountUp"
 
@@ -43,7 +42,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="flex items-center justify-center absolute bottom-0 left-0 right-0 !z-0 ">
-                    <img className="!z-0" src={image} alt="" />
+                    <img className="!z-50 " src="/Assets/Images/Group 1000008924.png" alt="" />
                 </div>
             </section>
         </main>

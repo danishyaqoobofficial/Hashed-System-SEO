@@ -1,5 +1,3 @@
-import Logo from "../Components/Logo"
-import LogoImage from '../assets/Images/Group 1000008920.png'
 import Navbar from "../Components/Navbar"
 import { Link } from "react-router-dom"
 
@@ -18,7 +16,7 @@ function Processing() {
                     <p className="text-center text-[18px] md:text-[20px] font-[400] text-[#000000] relative !z-50 ">We are processing on your website...</p>
                     <div className="mt-[22px] ">
                         <div className="flex items-center justify-center relative !z-50 ">
-                            <img className="h-[130px] w-[130px] relative !z-50 " src={LogoImage} alt="" />
+                            <img className="h-[130px] w-[130px] relative !z-50 " src='/Assets/Images/Group 1000008920.png' alt="" />
                         </div>
                         <h2 className="text-[#0D99FF] relative !z-50 font-[300] text-[18px] md:text-[26px] text-center mt-[22px] ">“Web Analytics is a revolution that enables you to base your decisions on data and not on opinions”</h2>
                         <div className="mt-[18px] flex items-center justify-center ">

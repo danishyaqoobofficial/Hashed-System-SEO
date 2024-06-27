@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import image from '../assets/Images/Frame.png'
 import React, { useState, useEffect, useRef } from 'react';
 
 
@@ -77,7 +76,7 @@ function EnterOtpPage() {
             <section className="h-[100vh] max-w-[1220px] w-full mx-auto px-[15px] md:px-[20px] flex items-center justify-center ">
                 <div className="max-w-[400px] w-full border-[#C0D6E7] border rounded-[12px] p-[16px] sm:p-[22px] ">
                     <div className='flex items-center justify-center mt-[12px] sm:mt-[0px] '>
-                        <img className='h-[60px] ' src={image} alt="" />
+                        <img className='h-[60px] ' src='/assets/Images/Frame.png' alt="" />
                     </div>
                     <div className='px-[30px] mx-auto '>
                         <h2 className='text-[22px] text-[#000000] font-[500] text-center mt-[16px] '>Verify your email</h2>
