@@ -3,11 +3,11 @@ import Sidebar from "./Sidebar"
 import Topbar from "./Topbar"
 
 const DashboardLayout = ({children, active}) => {
-    const [hide,setHide]=useState()
+  const [expandSidebar, setExpandSidebar] = useState(false)
   return (
     <div>
-        <Sidebar active={active} hide={hide} />
-        <Topbar />
+        <Sidebar active={active} setExpandSidebar={setExpandSidebar} expandSidebar={expandSidebar} />
+        <Topbar setExpandSidebar={setExpandSidebar} expandSidebar={expandSidebar}/>
         {children}
     </div>
   )
