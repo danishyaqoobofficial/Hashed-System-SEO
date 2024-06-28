@@ -41,7 +41,7 @@ const router = createBrowserRouter([
     element : <EnterOtpPage/>
   },
   {
-    path : '/dashboard',
+    path : '/dashboard/home',
     element : <Home/>,
     
   },

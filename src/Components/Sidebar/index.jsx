@@ -10,7 +10,7 @@ const Sidebar = ({active, expandSidebar, setExpandSidebar}) => {
     <div>
         <aside className=" bg-white border-r fixed left-0 bottom-0 h-full border-[#E5E6EE] px-[11px] py-[9px] z-50 transition-all ">
             <div className='flex items-center gap-[26px] custom_transition mb-[20px] '>
-                <Link to={'/dashboard'} className='flex items-center gap-[12px] cursor-pointer max-w-max ' >
+                <Link to={'/'} className='flex items-center gap-[12px] cursor-pointer max-w-max ' >
                     <span className='h-[50px] w-[50px] flex items-center justify-center '>
                         <img className=' h-full w-full ' src = "/Assets/Images/Logo.png" alt="" />
                     </span>

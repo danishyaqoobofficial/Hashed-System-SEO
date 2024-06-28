@@ -1,9 +1,16 @@
-import { Svg1, Svg2 } from "../Svg"
+import {Svg , Svg1, Svg2 } from "../Svg"
 
 
 const useSidebar = (active)=> {
 
     const routes = [
+        {
+            url: "/dashboard",
+            heading: "Dashboard",
+            icon:   <Svg stoke={active == 'home'  ? "fill-[#fff]" : "fill-[#1E4470]"}/>,
+            isActive: active == 'home',
+            link: '/dashboard/home'
+        },
         {
             url: "/tasks",
             heading: "Tasks",

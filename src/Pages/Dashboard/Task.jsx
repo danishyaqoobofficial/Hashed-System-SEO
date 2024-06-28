@@ -9,8 +9,8 @@ function Task() {
     return (
       <>
         <DashboardLayout active ={'task'}>
-            <main className='pl-[80px] pt-[70px] w-[100vw] h-[100%] '>
-                <section className='h-[100%] px-[15px] md:px-[20px] '>
+            <section className='pl-[80px] pt-[70px] w-[100vw] h-[100%] '>
+                <div className='h-[100%] px-[15px] md:px-[20px] '>
                     <div className='flex items-center justify-between py-[32px] gap-[22px] sm:flex-row flex-col '>
                         <h2 className='text-[000000] text-[24px] font-[500] '>Tasks</h2>
                         <div className='flex gap-[8px] sm:w-[400px] md:w-[440px] lg:w-[480px] w-full SearchAndButton '>
@@ -56,8 +56,8 @@ function Task() {
                             <AddTask  Name = 'Meta descriptions are added or not' Assignee = 'MA' Due_Date = 'Tomorrow' Priority = 'High' />
                         </div>
                     </div>
-                </section>
-            </main>
+                </div>
+            </section>
         </DashboardLayout>
       </>
     )
