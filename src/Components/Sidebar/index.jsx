@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useSidebar from './helper'
+import useSidebar from './helper.jsx'
 import { Link } from 'react-router-dom'
 
 const Sidebar = ({active}) => {
@@ -16,7 +16,7 @@ const Sidebar = ({active}) => {
             <div className='flex items-center gap-[26px] custom_transition mb-[20px] '>
                 <Link to={'/dashboard'} className='flex items-center gap-[12px] cursor-pointer max-w-max ' >
                     <span className='h-[50px] w-[50px] flex items-center justify-center '>
-                        <img className=' h-full w-full ' src = "/Assets/images/Logo.png" alt="" />
+                        <img className=' h-full w-full ' src = "/Assets/Images/Logo.png" alt="" />
                     </span>
                     <div className={`${hide} transition-all `}>
                         <h2 className="text-[#1E4470] text-[18px] md:text-[21px] font-[600] Familjen Grotesk select-none whitespace-nowrap transition-all " >Hashed System</h2>
@@ -31,7 +31,7 @@ const Sidebar = ({active}) => {
                 <Link to={itm?.link}
                     key={index} 
                     className="flex items-center gap-[12px] mt-[12px] transition-all cursor-pointer">
-                    <span className={`flex items-center justify-center h-[50px] w-[50px] p-[9px] rounded-[9px] transition-all hover:bg-[#0D99FF] ${itm.isActive? 'bg-[#0D99FF]' : ''} `}>
+                    <span className={`flex items-center justify-center h-[48px] w-[50px] p-[12px] rounded-[9px] transition-all hover:bg-[#0D99FF] group ${itm.isActive? 'bg-[#0D99FF]' : ''} `}>
                         {itm?.icon}
                     </span>
                     <p className={`${hide} text-[#1E4470] text-[17px] font-[500] transition-all`}>

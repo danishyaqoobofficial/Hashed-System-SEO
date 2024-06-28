@@ -1,4 +1,4 @@
-import Task from "../../Components/svgs"
+import { Svg1, Svg2 } from "../Svg"
 
 
 const useSidebar = (active)=> {
@@ -7,14 +7,14 @@ const useSidebar = (active)=> {
         {
             url: "/tasks",
             heading: "Tasks",
-            icon: 'Task',
+            icon:   <Svg1 stoke={active == 'task'  ? "stroke-[#fff]" : "stroke-[#1E4470]"}/>,
             isActive: active == 'task',
             link: '/dashboard/task'
         },
         {
             url: "/profile",
             heading: "Profile",
-            icon: 'Profile',
+            icon: <Svg2 stoke={active == 'profile'  ? "stroke-[#fff]" : "stroke-[#1E4470]"}/>,
             isActive: active == 'profile',
             link: '/dashboard/profile'
         }

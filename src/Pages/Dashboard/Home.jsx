@@ -5,6 +5,7 @@ import DoughuntChart from '../../Components/DoughuntChart';
 import IssuesTable from '../../Components/IssuesTable';
 import GaugeChart from '../../Components/GaugeChart';
 import Chart from '../../Components/Chart';
+import { NavLink } from 'react-router-dom';
 
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
                             <header className=' px-[12px] md:px-[20px] py-[11px] flex items-center gap-[5px] '>
                                 <div className='flex items-center justify-center px-[22px] py-[10px] bg-[#0D99FF] rounded-[6px] text-white text-[14px] font-[400] transition-all cursor-default '>Overview</div>
                                 <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default whitespace-nowrap '>Issues</div>
-                                <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default whitespace-nowrap '>Crawled Pages</div>
+                                <div className={`flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default whitespace-nowrap `}>Crawled Pages</div>
                                 <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default whitespace-nowrap '>Statics</div>
                                 <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default whitespace-nowrap '>Compare Crawls</div>
                                 <div className='flex items-center justify-center px-[22px] py-[10px] bg-transparent hover:bg-[#0D99FF] rounded-[6px] hover:text-white text-[#000000] text-[14px] font-[400] transition-all cursor-default whitespace-nowrap '>Progress</div>
