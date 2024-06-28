@@ -111,7 +111,7 @@ const Topbar = () => {
     <div className={` fixed bg-transparent !h-[100vh] inset-0 !z-50 ${popup} `} onClick={CloseNotificationPopup} >
 
     </div>
-    <div className={`bg-[#fff] w-[280px] sm:w-[330px] rounded-[11px] top-[55px] right-[8px] sm:right-[214px] Shadow overflow-hidden !z-[100] fixed ${popup} `} >
+    <div className={`bg-[#fff] w-[280px] sm:w-[330px] rounded-[11px] top-[50px] right-[5px] sm:right-[214px] Shadow overflow-hidden !z-[100] fixed ${popup} `} >
         <div className='flex items-center justify-between px-[18px] sm:px-[22px] py-[11px] border-b border-[#E4E4E4] '>
             <h2 className='text-[16px] font-[500] text-[#000000c4] '>Notifications</h2>
             <p className='text-[12px] text-slate-500 cursor-pointer ' onClick={mark_all_read} >Mark all as read</p>
