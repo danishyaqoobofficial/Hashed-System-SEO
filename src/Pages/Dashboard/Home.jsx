@@ -5,8 +5,7 @@ import DoughuntChart from '../../Components/DoughuntChart';
 import IssuesTable from '../../Components/IssuesTable';
 import GaugeChart from '../../Components/GaugeChart';
 import Chart from '../../Components/Chart';
-import { NavLink } from 'react-router-dom';
-
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 function Home() {
   
@@ -219,11 +218,11 @@ function Home() {
                                             </defs>
                                         </svg>
                                     </div>
-                                    {/* <ReactTooltip
+                                    <ReactTooltip
                                         id="my-tooltip-1"
                                         place="bottom"
                                         content="Site weekness"
-                                    /> */}
+                                    />
                                     <div className='h-[200px] w-full flex items-center justify-center '>
                                         <GaugeChart />
                                     </div>
@@ -309,11 +308,11 @@ function Home() {
                                                 </clipPath>
                                                 </defs>
                                             </svg>
-                                            {/* <ReactTooltip
+                                            <ReactTooltip
                                                 id="Robots-txt-Updates"
                                                 place="bottom"
                                                 content="Robots.txt Updatesp"
-                                            /> */}
+                                            />
                                         </div>
                                         <p className='text-[13px] text-[#000000] font-[300] mt-[11px] '>since the last crawl</p>
                                     </div>
