@@ -22,7 +22,7 @@ const Profile = () => {
                                 <input className='bg-transparent h-[41px] outline-none px-[6px] text-[#8E929E] text-[13px] w-full ' type="search" placeholder='Search  tasks ...' name="" id="" />
                             </div>
                             <div className='rounded-[7px] bg-[#0D99FF] flex items-center justify-center px-[22px] py-[9px] cursor-pointer select-none text-[14px] text-white SearchAndButton2 '>
-                                <p>+ Add Task</p>
+                                <p>+ Invite</p>
                             </div>
                         </div>
                     </div>

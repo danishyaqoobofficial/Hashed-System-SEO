@@ -6,21 +6,21 @@ const useSidebar = (active)=> {
     const routes = [
         {
             url: "/dashboard",
-            heading: "Dashboard",
+            name: "Dashboard",
             icon:   <Svg stoke={active == 'home'  ? "fill-[#fff]" : "fill-[#1E4470]"}/>,
             isActive: active == 'home',
-            link: '/dashboard/home'
+            link: '/dashboard/home',
         },
         {
             url: "/tasks",
-            heading: "Tasks",
+            name: "Tasks",
             icon:   <Svg1 stoke={active == 'task'  ? "stroke-[#fff]" : "stroke-[#1E4470]"}/>,
             isActive: active == 'task',
             link: '/dashboard/task'
         },
         {
             url: "/profile",
-            heading: "Profile",
+            name: "Profile",
             icon: <Svg2 stoke={active == 'profile'  ? "stroke-[#fff]" : "stroke-[#1E4470]"}/>,
             isActive: active == 'profile',
             link: '/dashboard/profile'

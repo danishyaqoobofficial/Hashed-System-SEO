@@ -7,6 +7,8 @@ import GaugeChart from '../../Components/GaugeChart';
 import Chart from '../../Components/Chart';
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import LineChartWidget from '../../Components/Widgets/Line Chart/LineChartWidget';
+import DonaldsChart from '../../Components/Widgets/Donalds Charts/DonaldsChart';
+import CrawledSingleCard from '../../Components/CrawledCard';
 
 function Home() {
   
@@ -15,8 +17,8 @@ function Home() {
       <DashboardLayout active ={'home'}>
         <main className=" flex bg-[#f7f7f9] z-0 w-fit">
             <section className='flex-1 min-h-[100vh] '>
-                <main className='pl-[70px] pt-[70px] w-[100vw]'>
-                    <section className='' >
+                <div className='pl-[70px] pt-[70px] w-[100vw]'>
+                    <div className='' >
                         <div className="overflow-x-auto max-w-[90vw]">
                             <header className=' px-[12px] md:px-[20px] py-[11px] flex items-center gap-[5px] '>
                                 <div className='flex items-center justify-center px-[22px] py-[10px] bg-[#0D99FF] rounded-[6px] text-white text-[14px] font-[400] transition-all cursor-default '>Overview</div>
@@ -40,92 +42,14 @@ function Home() {
 
                                 <div className=' mt-[16px] '>
                                     <div className='flex items-center gap-[26px] md:flex-row flex-col '>
-                                        <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full '>
-                                            <div className='flex items-center justify-between '>
-                                                <div>
-                                                    <p className='text-[13px] text-[#000000] font-[300] '>Crawlability</p>
-                                                    <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                                </div>
-                                                <div className='h-[70px] w-[70px] '>
-                                                    <DoughuntChart/>
-                                                </div>
-                                            </div>
-                                            <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                                View Details  
-                                            </div>
-                                        </div>
-                                        <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
-                                            <div className='flex items-center justify-between '>
-                                                <div>
-                                                    <p className='text-[13px] text-[#000000] font-[300] '>HTTPS</p>
-                                                    <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                                </div>
-                                                <div className='h-[70px] w-[70px] '>
-                                                    <DoughuntChart/>
-                                                </div>
-                                            </div>
-                                            <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                                View Details  
-                                            </div>
-                                        </div>
-                                        <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
-                                            <div className='flex items-center justify-between '>
-                                                <div>
-                                                    <p className='text-[13px] text-[#000000] font-[300] '>Site Performace</p>
-                                                    <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                                </div>
-                                                <div className='h-[70px] w-[70px] '>
-                                                    <DoughuntChart/>
-                                                </div>
-                                            </div>
-                                            <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                                View Details  
-                                            </div>
-                                        </div>
+                                        <DonaldsChart DoughuntChart heading = 'Crawlability' percentage = '90%' />
+                                        <DonaldsChart DoughuntChart heading = 'HTTPS' percentage = '90%' />
+                                        <DonaldsChart DoughuntChart heading = 'Site Performace' percentage = '90%' />
                                     </div>
                                     <div className='flex items-center gap-[26px] mt-[22px] md:flex-row flex-col  '>
-                                        <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full '>
-                                            <div className='flex items-center justify-between '>
-                                                <div>
-                                                    <p className='text-[13px] text-[#000000] font-[300] '>International SEO</p>
-                                                    <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                                </div>
-                                                <div>
-
-                                                </div>
-                                            </div>
-                                            <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                                View Details  
-                                            </div>
-                                        </div>
-                                        <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
-                                            <div className='flex items-center justify-between '>
-                                                <div>
-                                                    <p className='text-[13px] text-[#000000] font-[300] '>Core Web Vitals</p>
-                                                    <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                                </div>
-                                                <div>
-
-                                                </div>
-                                            </div>
-                                            <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                                View Details  
-                                            </div>
-                                        </div>
-                                        <div className='border border-[#E5E6EE] rounded-[6px] bg-white p-[11px] sm:p-[18px] flex-1 w-full'>
-                                            <div className='flex items-center justify-between '>
-                                                <div>
-                                                    <p className='text-[13px] text-[#000000] font-[300] '>Markup</p>
-                                                    <h3 className='text-[22px] text-[#0D99FF] font-[500] '>90%</h3>  
-                                                </div>
-                                                <div>
-
-                                                </div>
-                                            </div>
-                                            <div className='mt-[8px] max-w-max cursor-default bg-[#EBEEF3] rounded-[6px] flex items-center justify-center px-[16px] py-[8px] text-[#484955] text-[13px] font-[500] '>
-                                                View Details  
-                                            </div>
-                                        </div>
+                                        <DonaldsChart heading = 'Site Performace' percentage = '90%' />
+                                        <DonaldsChart heading = 'Site Performace' percentage = '90%' />
+                                        <DonaldsChart heading = 'Site Performace' percentage = '90%' />
                                     </div>
                                 </div>
 
@@ -179,13 +103,7 @@ function Home() {
                                     <div className='h-[200px] w-full flex items-center justify-center '>
                                         <GaugeChart />
                                     </div>
-                                    <div className='flex items-center justify-between '>
-                                        <div className='flex items-center gap-[6px] '>
-                                            <span className='rounded-[100px] h-[10px] w-[10px] bg-[#0D99FF] '></span>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Your site</p>
-                                        </div>
-                                        <p className='text-[13px] text-[#000000] font-[300] '>77%</p>
-                                    </div>
+                                    <CrawledSingleCard heading = 'Your site' value = '77%' />
                                     <div className='flex items-center justify-between mt-[5px] '>
                                         <div className='flex items-center gap-[6px] '>
                                             <span className=' h-[10px] w-[10px] '>
@@ -211,41 +129,11 @@ function Home() {
                                         <span className='h-full w-[85%] bg-[#FFB26D] '></span>
                                         <span className='h-full w-[5%] bg-[#0D99FF] '></span>
                                     </div>
-                                    <div className='flex items-center justify-between mt-[12px] '>
-                                        <div className='flex items-center gap-[6px] '>
-                                            <span className='rounded-[100px] h-[10px] w-[10px] bg-[#0D99FF] '></span>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Health</p>
-                                        </div>
-                                        <p className='text-[13px] text-[#000000] font-[300] '>1</p>
-                                    </div>
-                                    <div className='flex items-center justify-between mt-[9px] '>
-                                        <div className='flex items-center gap-[6px] '>
-                                            <span className='rounded-[100px] h-[10px] w-[10px] bg-[#0D99FF] '></span>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Broken</p>
-                                        </div>
-                                        <p className='text-[13px] text-[#000000] font-[300] '>3 +1</p>
-                                    </div>
-                                    <div className='flex items-center justify-between mt-[9px] '>
-                                        <div className='flex items-center gap-[6px] '>
-                                            <span className='rounded-[100px] h-[10px] w-[10px] bg-[#0D99FF] '></span>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Broken</p>
-                                        </div>
-                                        <p className='text-[13px] text-[#000000] font-[300] '>93 -1</p>
-                                    </div>
-                                    <div className='flex items-center justify-between mt-[9px] '>
-                                        <div className='flex items-center gap-[6px] '>
-                                            <span className='rounded-[100px] h-[10px] w-[10px] bg-[#0D99FF] '></span>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Redirects</p>
-                                        </div>
-                                        <p className='text-[13px] text-[#000000] font-[300] '>3</p>
-                                    </div>
-                                    <div className='flex items-center justify-between mt-[9px] '>
-                                        <div className='flex items-center gap-[6px] '>
-                                            <span className='rounded-[100px] h-[10px] w-[10px] bg-[#0D99FF] '></span>
-                                            <p className='text-[13px] text-[#000000] font-[300] '>Blocked</p>
-                                        </div>
-                                        <p className='text-[13px] text-[#000000] font-[300] '>0</p>
-                                    </div>
+                                    <CrawledSingleCard heading = 'Health' value = '1' />
+                                    <CrawledSingleCard heading = 'Broken' value = '3 +1' />
+                                    <CrawledSingleCard heading = 'Broken' value = '93 -1' />
+                                    <CrawledSingleCard heading = 'Redirects' value = '3' />
+                                    <CrawledSingleCard heading = 'Blocked' value = '0' />
                                 </div>
                                 <div className='w-full lg:flex-1 xl:w-[270px] border border-[#E5E6EE] rounded-[6px] bg-white p-[18px] xl:mt-[22px] '>
                                     <div className='border-b border-[#E4E4E4] pb-[14px] '>
@@ -277,8 +165,8 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </main>
+                    </div>
+                </div>
             </section>
         </main>
       </DashboardLayout>

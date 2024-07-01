@@ -30,7 +30,7 @@ const Topbar = ({setExpandSidebar, expandSidebar}) => {
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <span className={`bg-white p-[2px] absolute -top-[5px] -right-[5px] `}>
+                            <span className={`bg-white p-[2px] absolute -top-[5px] -right-[5px]  `}>
                                 <span className='bg-[#f93a3a] select-none rounded-[100px] h-[16px] w-[16px] flex items-center justify-center text-[10px] font-[600]  text-[#fff] '>
                                     3
                                 </span>
@@ -50,43 +50,39 @@ const Topbar = ({setExpandSidebar, expandSidebar}) => {
                     </div>
                 </div>
             </nav>
-
-
-<div className="">
-            <div className={` fixed bg-transparent !h-[100vh] inset-0 !z-50 ${showProfilePopup ? 'block' : "hidden"}`} onClick={()=> setShowProfilePopup(!showProfilePopup)} ></div>
-
-            <div className={` max-w-[140px] max-h-[220px] overflow-auto bg-[#fff] rounded-[11px] Shadow p-[5px] transition-all fixed top-[60px] right-[22px] !z-[100] ${showProfilePopup ? 'block' : "hidden"}`} onClick={()=> setShowProfilePopup(!showProfilePopup)}>
-                <div className='flex items-center justify-center gap-[13px] rounded-[9px] bg-transparent text-[#F10A0A] hover:bg-red-100 cursor-pointer px-[14px] py-[12px]  '>
-                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.3555L14 17.3555C14.7956 17.3555 15.5587 17.0394 16.1213 16.4768C16.6839 15.9142 17 15.1511 17 14.3555L17 4.35547C17 3.55982 16.6839 2.79676 16.1213 2.23415C15.5587 1.67154 14.7956 1.35547 14 1.35547L13 1.35547M5 5.35547L1 9.35547M1 9.35547L5 13.3555M1 9.35547L13 9.35547" stroke="#F10A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    Log Out
+            {/*  */}
+            <div className="">
+                <div className={` fixed bg-transparent !h-[100vh] inset-0 !z-50 ${showProfilePopup ? 'block' : "hidden"}`} onClick={()=> setShowProfilePopup(!showProfilePopup)} ></div>
+                <div className={` max-w-[140px] max-h-[220px] overflow-auto bg-[#fff] rounded-[11px] Shadow p-[5px] transition-all fixed top-[60px] right-[22px] !z-[100] ${showProfilePopup ? 'block' : "hidden"}`} onClick={()=> setShowProfilePopup(!showProfilePopup)}>
+                    <div className='flex items-center justify-center gap-[13px] rounded-[9px] bg-transparent text-[#F10A0A] hover:bg-red-100 cursor-pointer px-[14px] py-[12px]  '>
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.3555L14 17.3555C14.7956 17.3555 15.5587 17.0394 16.1213 16.4768C16.6839 15.9142 17 15.1511 17 14.3555L17 4.35547C17 3.55982 16.6839 2.79676 16.1213 2.23415C15.5587 1.67154 14.7956 1.35547 14 1.35547L13 1.35547M5 5.35547L1 9.35547M1 9.35547L5 13.3555M1 9.35547L13 9.35547" stroke="#F10A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        Log Out
+                    </div>
                 </div>
             </div>
-</div>
-
-
+            {/*  */}
             <div className="">
                 <div className={` fixed bg-transparent !h-[100vh] inset-0 !z-50 ${showNotification ? 'block' : 'hidden'}`} onClick={()=> setShowNotification(!showNotification)}></div>
-
-                    <div className={`bg-[#fff] w-[280px] sm:w-[330px] rounded-[11px] top-[50px] right-[5px] sm:right-[214px] Shadow overflow-hidden !z-[100] fixed ${showNotification ? 'block' : 'hidden'}`} >
-                        <div className='flex items-center justify-between px-[18px] sm:px-[22px] py-[11px] border-b border-[#E4E4E4] '>
-                            <h2 className='text-[16px] font-[500] text-[#000000c4] '>Notifications</h2>
-                            <p className='text-[12px] text-slate-500 cursor-pointer ' >Mark all as read</p>
+                <div className={`bg-[#fff] w-[280px] sm:w-[330px] rounded-[11px] top-[50px] right-[5px] sm:right-[214px] Shadow overflow-hidden !z-[100] fixed ${showNotification ? 'block' : 'hidden'}`} >
+                    <div className='flex items-center justify-between px-[18px] sm:px-[22px] py-[11px] border-b border-[#E4E4E4] '>
+                        <h2 className='text-[16px] font-[500] text-[#000000c4] '>Notifications</h2>
+                        <p className='text-[12px] text-slate-500 cursor-pointer ' onClick={()=> setShowNotification(!showNotification)} >Mark all as read</p>
+                    </div>
+                    <div className='max-h-[320px] overflow-auto'>
+                        <div className='border-b border-[#E4E4E4] px-[18px] sm:px-[22px] py-[11px] flex items-center gap-[9px] '>
+                            <i class="fa-regular fa-message text-[18px] text-[#0D99FF]"></i>
+                            <p className='text-[13px] text-[#000000] font-[300] line-clamp-2 '>You a new message notification. Open it and start your working.</p>
                         </div>
-                        <div className='max-h-[320px] overflow-auto'>
-                            <div className='border-b border-[#E4E4E4] px-[18px] sm:px-[22px] py-[11px] flex items-center gap-[9px] '>
-                                <i class="fa-regular fa-message text-[18px] text-[#0D99FF]"></i>
-                                <p className='text-[13px] text-[#000000] font-[300] line-clamp-2 '>You a new message notification. Open it and start your working.</p>
-                            </div>
-                            <div className='border-b border-[#E4E4E4] px-[18px] sm:px-[22px] py-[11px] flex items-center gap-[9px] '>
-                                <i class="fa-regular fa-message text-[18px] text-[#0D99FF]"></i>
-                                <p className='text-[13px] text-[#000000] font-[300] line-clamp-2 '>You a new message notification. Open it and start your working.</p>
-                            </div>
-                            <div className='border-b border-[#E4E4E4] px-[18px] sm:px-[22px] py-[11px] flex items-center gap-[9px] '>
-                                <i class="fa-regular fa-message text-[18px] text-[#0D99FF]"></i>
-                                <p className='text-[13px] text-[#000000] font-[300] line-clamp-2 '>You a new message notification. Open it and start your working.</p>
-                            </div>
+                        <div className='border-b border-[#E4E4E4] px-[18px] sm:px-[22px] py-[11px] flex items-center gap-[9px] '>
+                            <i class="fa-regular fa-message text-[18px] text-[#0D99FF]"></i>
+                            <p className='text-[13px] text-[#000000] font-[300] line-clamp-2 '>You a new message notification. Open it and start your working.</p>
+                        </div>
+                        <div className='border-b border-[#E4E4E4] px-[18px] sm:px-[22px] py-[11px] flex items-center gap-[9px] '>
+                            <i class="fa-regular fa-message text-[18px] text-[#0D99FF]"></i>
+                            <p className='text-[13px] text-[#000000] font-[300] line-clamp-2 '>You a new message notification. Open it and start your working.</p>
                         </div>
                     </div>
+                </div>
             </div>
         </>
     )
