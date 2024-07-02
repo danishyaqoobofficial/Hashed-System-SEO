@@ -17,7 +17,7 @@ function Home() {
       <DashboardLayout active ={'home'}>
         <main className=" flex bg-[#f7f7f9] z-0 w-fit">
             <section className='flex-1 min-h-[100vh] '>
-                <div className='pl-[70px] pt-[70px] w-[100vw]'>
+                <div className='pl-[70px] pt-[70px]'>
                     <div className='' >
                         <div className="overflow-x-auto max-w-[90vw]">
                             <header className=' px-[12px] md:px-[20px] py-[11px] flex items-center gap-[5px] '>
