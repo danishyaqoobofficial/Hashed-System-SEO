@@ -5,7 +5,6 @@ import AddTask from '../../Components/AddTask';
 
 function Task() {
 
-
     return (
       <>
         <DashboardLayout active ={'task'}>
@@ -62,8 +61,23 @@ function Task() {
 
         {/* Add task popup */}
 
-        <div className=' absolute inset-0 h-[100vh] bg-[#000]/30 '>
-
+        <div className=' absolute inset-0 h-[100vh] bg-[#000]/40 flex items-center justify-center z-50 '>
+            <div className='bg-white rounded-[12px] max-w-[580px] w-full mx-auto py-[11px]'>
+                <div className='flex items-center justify-between px-[18px] border-b border-[#E6E6E6] py-[3px] '>
+                    <h2 className='text-[000000] text-[21px] font-[500] '>Create Task</h2>
+                    <span className='flex items-center justify-center p-[8px] cursor-pointer rounded-[100px] h-[28px] w-[28px] bg-[#ECF5FB] '>
+                        <svg className='h-full w-full ' viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5776 1L1 11M1.42239 1L12 11" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </div>
+                <div className='px-[18px] mt-[12px] w-full '>
+                    <div className='w-full '>
+                        <label className='text-[#807D8D] text-[12px] font-[400] ' htmlFor="Task Name">Task Name</label>
+                        <input className='flex-1 w-full outline-none border border-[E3E2E9] mt-[1px] text-[13px] px-[11px] py-[7px] rounded-[6px] text-[#1E2549] ' type="text" id='Task Name' placeholder='Enter your Task Name' />
+                    </div>
+                </div>
+            </div>
         </div>
       </>
     )
